@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#113857</color>
+    <color name="colorPrimaryTrans">#a6113857</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#d6d6d6</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorSecondary">#19daca</color>
+    <color name="colorSecondaryDark">#32baaf</color>
+    <color name="colorBlue">#19B7DA</color>
+    <color name="colorGreyDisCl">#C5C5C5</color>
+    <color name="colorGreyDisOs">#818181</color>
+</resources>

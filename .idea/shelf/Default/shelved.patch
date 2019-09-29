@@ -1,0 +1,258 @@
+Index: app/src/main/res/layout/activity_juego_ahorcado.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<android.support.constraint.ConstraintLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".JuegoAhorcado\">\n\n    <TextView\n        android:id=\"@+id/intenRes\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginEnd=\"40dp\"\n        android:text=\"Intentos Restantes: \"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <TextView\n        android:id=\"@+id/hideWord\"\n        android:layout_width=\"384dp\"\n        android:layout_height=\"49dp\"\n        android:layout_marginStart=\"14dp\"\n        android:layout_marginTop=\"380dp\"\n        android:layout_marginEnd=\"13dp\"\n        android:layout_marginBottom=\"15dp\"\n        android:gravity=\"center_vertical|center_horizontal\"\n        android:text=\"_ _ _ _ _ _ _ _\"\n        android:textAllCaps=\"true\"\n        android:textSize=\"25sp\"\n        android:textStyle=\"bold|italic\"\n        app:layout_constraintBottom_toTopOf=\"@+id/linearLayout\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <TextView\n        android:id=\"@+id/showEnun\"\n        android:layout_width=\"369dp\"\n        android:layout_height=\"64dp\"\n        android:layout_marginStart=\"21dp\"\n        android:layout_marginLeft=\"21dp\"\n        android:layout_marginEnd=\"21dp\"\n        android:layout_marginRight=\"21dp\"\n        android:gravity=\"fill\"\n        android:text=\"Enunciado pregunta\"\n        android:textSize=\"12sp\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toBottomOf=\"@+id/intenRes\"\n        tools:autoSizeTextType=\"uniform\" />\n\n    <TextView\n        android:id=\"@+id/intentosRest\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginTop=\"15dp\"\n        android:layout_marginEnd=\"24dp\"\n        android:text=\"7\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <ImageView\n        android:id=\"@+id/animacion\"\n        android:layout_width=\"338dp\"\n        android:layout_height=\"283dp\"\n        android:layout_marginStart=\"26dp\"\n        android:layout_marginTop=\"24dp\"\n        android:layout_marginEnd=\"25dp\"\n        android:layout_marginBottom=\"20dp\"\n        app:layout_constraintBottom_toTopOf=\"@+id/hideWord\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toBottomOf=\"@+id/showEnun\"\n        app:srcCompat=\"@color/colorPrimaryDark\" />\n\n    <LinearLayout\n        android:id=\"@+id/linearLayout\"\n        android:layout_width=\"368dp\"\n        android:layout_height=\"150dp\"\n        android:layout_marginStart=\"15dp\"\n        android:layout_marginEnd=\"15dp\"\n        android:layout_marginBottom=\"5dp\"\n        android:orientation=\"vertical\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\">\n\n        <LinearLayout\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"50dp\"\n            android:orientation=\"horizontal\">\n\n            <TextView\n                android:id=\"@+id/let1\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:lines=\"@android:integer/config_shortAnimTime\"\n                android:onClick=\"comprobar\"\n                android:text=\"A\"\n                android:textAllCaps=\"false\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let2\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"B\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let3\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"C\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let4\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"D\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let5\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"F\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let6\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"G\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let7\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"H\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n        </LinearLayout>\n\n        <LinearLayout\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"50dp\"\n            android:orientation=\"horizontal\">\n\n            <TextView\n                android:id=\"@+id/let8\"\n                android:layout_width=\"52.5dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"I\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\"\n                tools:layout_editor_absoluteX=\"0dp\"\n                tools:layout_editor_absoluteY=\"488dp\" />\n\n            <TextView\n                android:id=\"@+id/let9\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"J\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let10\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"K\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let11\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"L\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let12\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"M\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let13\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"N\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let14\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"O\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n        </LinearLayout>\n\n        <LinearLayout\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"50dp\"\n            android:orientation=\"horizontal\">\n\n            <TextView\n                android:id=\"@+id/let15\"\n                android:layout_width=\"52.5dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"E\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\"\n                tools:layout_editor_absoluteX=\"0dp\"\n                tools:layout_editor_absoluteY=\"488dp\" />\n\n            <TextView\n                android:id=\"@+id/let16\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"P\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let17\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"Q\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let18\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"R\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let19\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"S\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let20\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"T\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n\n            <TextView\n                android:id=\"@+id/let21\"\n                android:layout_width=\"52.7dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerHorizontal=\"true\"\n                android:layout_margin=\"3dp\"\n                android:layout_weight=\"1\"\n                android:gravity=\"center_vertical|center_horizontal\"\n                android:onClick=\"comprobar\"\n                android:text=\"U\"\n                android:textSize=\"25sp\"\n                android:textStyle=\"bold\" />\n        </LinearLayout>\n\n    </LinearLayout>\n\n</android.support.constraint.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_juego_ahorcado.xml	(revision 7b86275d464df1f85736f6468f21e9194877d17b)
++++ app/src/main/res/layout/activity_juego_ahorcado.xml	(date 1541263981195)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <android.support.constraint.ConstraintLayout
++    android:background="@drawable/fondo_crucigrama"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+@@ -13,6 +14,7 @@
+         android:layout_height="wrap_content"
+         android:layout_marginEnd="40dp"
+         android:text="Intentos Restantes: "
++        android:textColor="@color/colorPrimary"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+@@ -27,6 +29,7 @@
+         android:gravity="center_vertical|center_horizontal"
+         android:text="_ _ _ _ _ _ _ _"
+         android:textAllCaps="true"
++        android:textColor="@color/colorPrimary"
+         android:textSize="25sp"
+         android:textStyle="bold|italic"
+         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+@@ -39,11 +42,10 @@
+         android:layout_width="369dp"
+         android:layout_height="64dp"
+         android:layout_marginStart="21dp"
+-        android:layout_marginLeft="21dp"
+         android:layout_marginEnd="21dp"
+-        android:layout_marginRight="21dp"
+         android:gravity="fill"
+         android:text="Enunciado pregunta"
++        android:textColor="@color/colorPrimary"
+         android:textSize="12sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+@@ -54,9 +56,9 @@
+         android:id="@+id/intentosRest"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginTop="15dp"
+-        android:layout_marginEnd="24dp"
++        android:layout_marginEnd="16dp"
+         android:text="7"
++        android:textColor="@color/colorPrimary"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+@@ -72,7 +74,7 @@
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/showEnun"
+-        app:srcCompat="@color/colorPrimaryDark" />
++        app:srcCompat="@android:color/transparent" />
+ 
+     <LinearLayout
+         android:id="@+id/linearLayout"
+@@ -103,6 +105,8 @@
+                 android:onClick="comprobar"
+                 android:text="A"
+                 android:textAllCaps="false"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -116,6 +120,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="B"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -129,6 +135,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="C"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -142,6 +150,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="D"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -155,6 +165,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="F"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -168,6 +180,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="G"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -181,6 +195,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="H"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+         </LinearLayout>
+@@ -199,6 +215,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="I"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold"
+                 tools:layout_editor_absoluteX="0dp"
+@@ -214,6 +232,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="J"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -227,6 +247,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="K"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -240,6 +262,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="L"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -253,6 +277,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="M"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -266,6 +292,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="N"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -279,6 +307,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="O"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+         </LinearLayout>
+@@ -297,6 +327,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="E"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold"
+                 tools:layout_editor_absoluteX="0dp"
+@@ -312,6 +344,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="P"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -325,8 +359,10 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="Q"
++                android:textColor="@color/colorPrimary"
+                 android:textSize="25sp"
+-                android:textStyle="bold" />
++                android:textStyle="bold"
++                android:textColorHint="@color/colorSecondary" />
+ 
+             <TextView
+                 android:id="@+id/let18"
+@@ -338,6 +374,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="R"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -351,6 +389,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="S"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -364,6 +404,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="T"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+ 
+@@ -377,6 +419,8 @@
+                 android:gravity="center_vertical|center_horizontal"
+                 android:onClick="comprobar"
+                 android:text="U"
++                android:textColor="@color/colorPrimary"
++                android:textColorHint="@color/colorSecondary"
+                 android:textSize="25sp"
+                 android:textStyle="bold" />
+         </LinearLayout>

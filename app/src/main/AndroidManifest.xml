@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.edu.poli.gamification.poliplaygami">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/oldlogo_poliplay_grande"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="co.edu.poli.gamification.poliplaygami.Juegos.JuegoAyuda"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomTheme"/>
+        <activity android:name="co.edu.poli.gamification.poliplaygami.Secuencia.Ranking" />
+        <activity android:name="co.edu.poli.gamification.poliplaygami.Secuencia.SeleccionarPuesto" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Secuencia.Login"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Secuencia.SeleccionarCurso"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Secuencia.SeleccionarRol"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Secuencia.SeleccionarTransporte"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Secuencia.Mapa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Juegos.JuegoRelacionar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Juegos.JuegoRelacionarSolucion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Juegos.JuegoAhorcado"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Juegos.JuegoTrivia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Juegos.JuegoCalculadora"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Juegos.JuegoCrucigrama"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Juegos.JuegoCrucigramaSolucion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Secuencia.SeleccionarRolPopUp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name="co.edu.poli.gamification.poliplaygami.Narrativa.IntroduccionCurso" />
+        <activity
+            android:name="co.edu.poli.gamification.poliplaygami.Secuencia.SeleccionarTransportePopUp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name="co.edu.poli.gamification.poliplaygami.Secuencia.Registro" />
+        <activity android:name="co.edu.poli.gamification.poliplaygami.Narrativa.InicioViaje" />
+        <activity android:name="co.edu.poli.gamification.poliplaygami.Secuencia.PreguntasInicio" />
+    </application>
+
+</manifest>

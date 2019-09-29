@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Secuencia.Login">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/headerLogin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/headerLogin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/spaceLoginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <EditText
+        android:id="@+id/usernameLogin"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/textfield_data"
+        android:ems="10"
+        android:hint="@string/text_username"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="1dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/spaceLoginMiddle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spaceLoginTop" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/spaceLoginMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <EditText
+        android:id="@+id/passwordLogin"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textfield_data"
+        android:ems="10"
+        android:hint="@string/text_contrasena"
+        android:inputType="textPassword"
+        android:paddingBottom="8dp"
+        android:paddingEnd="1dp"
+        android:paddingStart="10dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/spaceLoginBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spaceLoginMiddle" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/spaceLoginBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/boton_login"
+        android:text="@string/btn_login"
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/footerLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spaceLoginBottom" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/footerLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <TextView
+        android:id="@+id/msj_no_registro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/text_noRegis"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/msj_no_registro2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/footerLogin" />
+
+    <TextView
+        android:id="@+id/msj_no_registro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/text_registAqui"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/msj_no_registro1"
+        app:layout_constraintTop_toTopOf="@+id/footerLogin" />
+
+    <ProgressBar
+        android:id="@+id/progressBarLogin"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

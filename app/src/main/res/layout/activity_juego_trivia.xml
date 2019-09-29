@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo_ambiental"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Juegos.JuegoTrivia">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/trivia_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Resuelve la trivia para conseguir monedas"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/scroll_trivia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scroll_trivia"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/opcionRes1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/trivia_tittle">
+
+            <LinearLayout
+                android:id="@+id/LayTrivia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/enunPreg"
+                    android:layout_width="match_parent"
+                    android:layout_height="370dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="fill_horizontal"
+                    android:scrollbars="vertical"
+                    android:text="texto"
+                    android:textAllCaps="false"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/opcionRes1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangulo_boton_claro"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="nextScreen"
+            android:scrollbars="vertical"
+            android:text="Opción1"
+            android:textSize="11sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/opcionRes2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scroll_trivia" />
+
+        <Button
+            android:id="@+id/opcionRes3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangulo_boton_claro"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="nextScreen"
+            android:scrollbars="vertical"
+            android:text="Opción 3"
+            android:textSize="11sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/opcionRes4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/opcionRes2" />
+
+        <Button
+            android:id="@+id/opcionRes4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rectangulo_boton_claro"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="nextScreen"
+            android:scrollbars="vertical"
+            android:text="Opción 4"
+            android:textSize="11sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/opcionRes3" />
+
+        <Button
+            android:id="@+id/opcionRes2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangulo_boton_claro"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="nextScreen"
+            android:scrollbars="vertical"
+            android:text="Opción 2"
+            android:textSize="11sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/opcionRes3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/opcionRes1" />
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

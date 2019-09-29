@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:background="@drawable/fondo_principal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Secuencia.SeleccionarRol">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_poli_azul" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="300dp"
+        android:layout_height="480dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:showDividers="none">
+
+            <ImageView
+                android:id="@+id/rolM1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol1"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol1f"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:showDividers="none">
+
+            <ImageView
+                android:id="@+id/rolM2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol2"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/rolF2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol2f"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorSecondaryDark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:showDividers="none">
+
+            <ImageView
+                android:id="@+id/rolM3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol3"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol3f"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:showDividers="none">
+
+            <ImageView
+                android:id="@+id/rolM4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol4"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/rolF4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol4f"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorSecondaryDark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:showDividers="none">
+
+            <ImageView
+                android:id="@+id/rolM5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol5"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol5f"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:showDividers="none">
+
+            <ImageView
+                android:id="@+id/rolM6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol6"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/rolF6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/rol6f"
+                android:onClick="btnSelRol"
+                app:srcCompat="@color/colorSecondaryDark" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnVolver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/boton_volver" />
+
+</android.support.constraint.ConstraintLayout>

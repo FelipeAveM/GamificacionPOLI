@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">PoliPlay</string>
+    <string name="poli_play">PoliPlay</string>
+    <string name="toast_salir">Presione una vez más para salir de la aplicación.</string>
+    <string name="progress_esperar">Por favor espere.</string>
+
+    <!-- PANTALLA LOGIN -->
+    <string name="text_username">Usuario</string>
+    <string name="text_contrasena">Contraseña</string>
+    <string name="text_noRegis">¿Aún no estás registrado?</string>
+    <string name="text_registAqui"><u>Registrate aquí.</u></string>
+    <string name="btn_login">Entrar</string>
+    <string name="toast_usuario">Ingrese su Usuario.</string>
+    <string name="toast_contrasena">Ingrese su Contraseña.</string>
+    <string name="toast_noEquals">Datos incorrectos.</string>
+    <string name="progress_login">Iniciando Sesión.</string>
+
+    <!-- PANTALLA REGISTRO -->
+    <string name="btn_registro">REGISTRARME</string>
+    <string name="ingreso_email">Ingresa tu E-mail</string>
+    <string name="ingreso_usuario">Ingresa tu nombre de usuario</string>
+    <string name="ingreso_codigo">Ingresa tu código</string>
+    <string name="ingreso_contrasena">Ingresa tu contraseña</string>
+    <string name="ingreso_contrasena_conf">Confirma tu contraseña</string>
+
+    <!-- PANTALLA SELECCION CURSO -->
+    <string name="selCurso">SELECCIONA EL CURSO</string>
+    <string name="cultura">Cultura Ambiental</string>
+    <string name="proceso">Proceso Administrativo</string>
+    <string name="conjRadBut">Conjunto</string>
+
+    <!-- PANTALLA SELECCION ROL -->
+    <string name="selRol">SELECCIONA UN ROL</string>
+
+    <string name="rolAgua">Agua</string>
+    <string name="rolTierra">Tierra</string>
+    <string name="rolAire">Aire</string>
+    <string name="rolEnergia">Energía</string>
+    <string name="rolFauna">Flora y Fauna</string>
+    <string name="rolReciclaje">Reciclaje</string>
+
+    <string name="rol1">Explorador</string>
+    <string name="rol2">Filantropo</string>
+    <string name="rol3">Triunfador</string>
+    <string name="rol4">Pensador</string>
+    <string name="rol5">Revolucionario</string>
+    <string name="rol6">Comunicador</string>
+    <string name="rol1f">Explorador</string>
+    <string name="rol2f">Filantropo</string>
+    <string name="rol3f">Triunfador</string>
+    <string name="rol4f">Pensador</string>
+    <string name="rol5f">Revolucionario</string>
+    <string name="rol6f">Comunicador</string>
+
+
+    <!-- PANTALLA DE TRANSPORTE -->
+    <string name="selTrans">SELECCIONA UN MEDIO DE TRANSPORTE</string>
+    <string name="Transporte1">Transporte 1</string>
+    <string name="Transporte2">Transporte 2</string>
+    <string name="Transporte3">Transporte 3</string>
+    <string name="Transporte4">Transporte 4</string>
+    <string name="Transporte5">Transporte 5</string>
+    <string name="Transporte6">Transporte 6</string>
+
+    <!-- Comunes -->
+    <string name="continuar">Continuar</string>
+    <string name="seleccionar">Seleccionar</string>
+
+    <!-- Temporales -->
+    <string name="juego1">Relacionar</string>
+    <string name="juego2">Trivia</string>
+    <string name="juego3">Ahorcado</string>
+    <string name="juego4">Crucigrama</string>
+    <string name="juego5">Calculadora</string>
+    <string name="title_activity_juego_relacionar2">JuegoRelacionar2</string>
+    <string name="seleccionar_silla">Ahora selecciona tu silla en el avión. Cada fila será un equipo de trabajo. (Ten en cuenta que las posibilidades del triunfo, depende de la cantidad de gente y el trabajo en equipo.)</string>
+
+    <!-- Juego Relacionar -->
+    <string name="blankSpace">                           </string>
+
+    <string name="enunciado1">En él se plasman los elementos del proceso de planeación.</string>
+    <string name="enunciado2">Son las guías para orientar la acción gerencial para lograr la estrategia.</string>
+    <string name="enunciado3">Definición amplia del propósito de la empresa y la descripción del negocio o giro al que se dedica.</string>
+    <string name="enunciado4">Son los cursos de acción que muestran la dirección y el empleo general de los recursos para lograr los objetivos.</string>
+    <string name="enunciado5">Reglas administrativas de observancia obligatoria para la realización de una operación, procedimiento, programa o presupuesto.</string>
+    <string name="enunciado6">En ellos se detallan el conjunto de actividades, responsables y tiempos necesarios para llevar a cabo las estrategias.</string>
+
+    <string name="respuesta1">Plan Maestro</string>
+    <string name="respuesta2">Políticas</string>
+    <string name="respuesta3">Misión</string>
+    <string name="respuesta4">Estrategias</string>
+    <string name="respuesta5">Normas</string>
+    <string name="respuesta6">Cronogramas</string>
+
+    <!-- Juego Crucigrama -->
+    <string name="space"> </string>
+
+    <!-- Juego Calculadora -->
+    <string name="opcion_1_calculadora">Conozco mi factura mensual</string>
+    <string name="opcion_2_calculadora">No sé mi consumo pero me considero un estudiante promedio.</string>
+    <string name="trivia">TRIVIA</string>
+</resources>
