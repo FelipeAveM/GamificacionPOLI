@@ -26,26 +26,27 @@ public class InicioViaje extends AppCompatActivity {
         }*/
 
         layout_inicio_viaje = (ConstraintLayout)findViewById(R.id.layout_inicio_viaje);
-        layout_inicio_viaje.setBackground(getResources().getDrawable(R.drawable.inicio_viaje_uno)); //temporal
+        layout_inicio_viaje.setBackground(getResources().getDrawable(R.drawable.historia_uno)); //temporal
     }
 
     public void goForward(View view){
         if(cont == 1){
-            layout_inicio_viaje.setBackground(getResources().getDrawable(R.drawable.inicio_viaje_dos));
+            layout_inicio_viaje.setBackground(getResources().getDrawable(R.drawable.historia_2));
             cont++;
             return;
         }
         else if(cont == 2){
-            layout_inicio_viaje.setBackground(getResources().getDrawable(R.drawable.inicio_viaje_tres));
+            layout_inicio_viaje.setBackground(getResources().getDrawable(R.drawable.historia_3));
             cont++;
             return;
         }
-        else if(cont == 3){
+        /*else if(cont == 3){
             layout_inicio_viaje.setBackground(getResources().getDrawable(R.drawable.inicio_viaje_cuatro));
             cont++;
             return;
-        }
-        else if(cont == 4){
+        }*/
+        //else if(cont == 4){
+        else if(cont == 3){
             Intent i = new Intent(this, SeleccionarTransporte.class);
             Utiles.terminarConexion();
             startActivity(i);

@@ -13,12 +13,13 @@ public class JuegoAyuda extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego_ayuda);
 
-
+        /*
         //EscalarPantalla
         DisplayMetrics md = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(md);
         int width = md.widthPixels;
         int heigth = md.heightPixels;
         getWindow().setLayout((int) (width * .8), (int) (heigth * .6));
+         */
     }
 }

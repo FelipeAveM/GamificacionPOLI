@@ -32,12 +32,12 @@ public class IntroduccionCurso extends AppCompatActivity {
 
     public void goForward(View view){
         if(cont == 0 && curso){
-            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.descripcion_intro_proceso_dos));
+            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.fondo_intro2));
             cont++;
             return;
         }
         else if(cont == 1 && curso){
-            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.descipcion_intro_proceso_tres));
+            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.fondo_intro3));
             cont++;
             return;
         }
@@ -55,11 +55,11 @@ public class IntroduccionCurso extends AppCompatActivity {
 
     private void setImages(){
         if(Login.user.getSignature().equals("Proceso Administrativo")){
-            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.descripcion_intro_proceso_uno));
+            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.fondo_intro1));
             curso = true;
         }
         else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
-            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.descripcion_intro_proceso_uno));
+            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.fondo_intro1));
             curso = true;
         }
     }

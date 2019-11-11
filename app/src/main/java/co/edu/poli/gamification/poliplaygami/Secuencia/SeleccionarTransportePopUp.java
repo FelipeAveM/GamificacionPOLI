@@ -21,11 +21,13 @@ public class SeleccionarTransportePopUp extends Activity {
         transporteSeleccionado = Login.user.getTempTransport();
 
         //EscalarPantalla
+        /*
         DisplayMetrics md = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(md);
         int width = md.widthPixels;
         int heigth = md.heightPixels;
         getWindow().setLayout((int) (width * .8), (int) (heigth * .6));
+         */
 
         escogerTransportePopUp();
     }

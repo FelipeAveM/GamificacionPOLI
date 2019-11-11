@@ -31,13 +31,14 @@ public class SeleccionarRolPopUp extends Activity {
 
         rol = (ImageView)findViewById(R.id.rolPrin);
         rolSelected = Login.user.getTempRole();
-
+        /*
         //EscalarPantalla
         DisplayMetrics md = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(md);
         int width = md.widthPixels;
         int heigth = md.heightPixels;
         getWindow().setLayout((int) (width * .8), (int) (heigth * .6));
+         */
 
         escogerRolPop();
     }
@@ -45,40 +46,40 @@ public class SeleccionarRolPopUp extends Activity {
     public void escogerRolPop() {
         if (Login.user.getSignature().equals("Proceso Administrativo") || Login.user.getSignature().equals("Pensamiento Algoritmico")) { //Pensamiento Algoritmico
             if (rolSelected.equals("Rol 1"))    {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_h_explorador));
+                rol.setImageDrawable(getDrawable(R.drawable.juan_desc));
             }
             else if (rolSelected.equals("Rol 1f"))    {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_m_explorador));
+                rol.setImageDrawable(getDrawable(R.drawable.juana_desc));
             }
             else if (rolSelected.equals("Rol 2")) {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_h_filantropo));
+                rol.setImageDrawable(getDrawable(R.drawable.fernando_desc));
             }
             else if (rolSelected.equals("Rol 2f")) {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_m_filantropa));
-            }
-            else if (rolSelected.equals("Rol 3")) {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_h_triunfador));
+                rol.setImageDrawable(getDrawable(R.drawable.fernanda_desc));
             }
             else if (rolSelected.equals("Rol 3f")) {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_m_triunfadora));
+                rol.setImageDrawable(getDrawable(R.drawable.carlos_desc));
+            }
+            else if (rolSelected.equals("Rol 3")) {
+                rol.setImageDrawable(getDrawable(R.drawable.carla_desc));
             }
             else if (rolSelected.equals("Rol 4")) {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_h_pensador));
+                rol.setImageDrawable(getDrawable(R.drawable.alex_desc));
             }
             else if (rolSelected.equals("Rol 4f")) {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_m_pensadora));
+                rol.setImageDrawable(getDrawable(R.drawable.alexa_desc));
             }
             else if (rolSelected.equals("Rol 5")) {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_h_revolucionario));
+                rol.setImageDrawable(getDrawable(R.drawable.alejo_desc));
             }
             else if (rolSelected.equals("Rol 5f")) {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_m_revolucionaria));
+                rol.setImageDrawable(getDrawable(R.drawable.aleja_desc));
             }
             else if(rolSelected.equals("Rol 6")){
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_h_socializador));
+                rol.setImageDrawable(getDrawable(R.drawable.andres_desc));
             }
             else if(rolSelected.equals("Rol 6f")){
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_m_socializador));
+                rol.setImageDrawable(getDrawable(R.drawable.andrea_desc));
             }
         }
         /*else if (Login.user.getSignature().equals("Cultura Ambiental")) {

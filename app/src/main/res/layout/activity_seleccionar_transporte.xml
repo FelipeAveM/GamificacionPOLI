@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    android:background="@drawable/fondo_principal"
+    android:background="@drawable/seleccion_personaje"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,27 +8,16 @@
     android:layout_height="match_parent"
     tools:context=".Secuencia.SeleccionarTransporte">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="235dp"
-        android:layout_height="55dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_poli_azul" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="300dp"
         android:layout_height="480dp"
-        android:layout_marginBottom="1dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -138,28 +127,25 @@
         android:id="@+id/imageButton"
         android:layout_width="97dp"
         android:layout_height="47dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:onClick="continuar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/boton_adelante" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/boton_siguiente" />
 
     <TextView
         android:id="@+id/textView"
         style="@android:style/Widget.Holo.Light.TextView"
         android:layout_width="317dp"
         android:layout_height="72dp"
-        android:layout_marginStart="8dp"
         android:text="Para salir de la isla puedes construir cualqueira de estos medios de transporte con las monedas ganadas en los juegos."
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/transparent"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

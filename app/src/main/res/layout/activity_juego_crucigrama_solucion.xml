@@ -4,19 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_crucigrama"
+    android:background="@drawable/crucigrama_fondo"
     tools:context=".Juegos.JuegoCrucigramaSolucion">
-
-    <ImageView
-        android:id="@+id/tituloCrucigrama2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/header_crucigrama2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/titulo_crucigrama" />
 
     <android.support.constraint.Guideline
         android:id="@+id/header_crucigrama2"
@@ -2884,7 +2873,7 @@
         android:layout_marginTop="24dp"
         android:padding="10dp"
         android:textAlignment="center"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonContinuar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -2902,9 +2891,8 @@
         android:id="@+id/buttonContinuar"
         android:layout_width="204dp"
         android:layout_height="33dp"
-        android:background="@drawable/rectangulo_boton_claro"
+        android:background="@drawable/boton_terminar"
         android:onClick="continuarBtn"
-        android:text="@string/continuar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

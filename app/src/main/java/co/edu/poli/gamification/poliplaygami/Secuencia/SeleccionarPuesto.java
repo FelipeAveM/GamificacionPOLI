@@ -52,7 +52,28 @@ public class SeleccionarPuesto extends AppCompatActivity {
         for (int i = 1; i < 6; i++) {
             Button tv = new Button(this);
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1.0f);
-            tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas_en));
+
+            switch (i){
+                case 1:
+                    tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas1));
+                break;
+                case 2:
+                    tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas2));
+                    break;
+                case 3:
+                    tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas3));
+                    break;
+                case 4:
+                    tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas4));
+                    break;
+                case 5:
+                    tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas5));
+                    break;
+                default:
+                    tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas1));
+                    break;
+            }
+
             tv.setLayoutParams(lp);
             tv.setId((l*10)+i);
             tv.setText(l+"-"+String.valueOf((char)(i+64)));

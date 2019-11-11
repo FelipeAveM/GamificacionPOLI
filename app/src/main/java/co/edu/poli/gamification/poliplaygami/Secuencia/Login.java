@@ -17,6 +17,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+import co.edu.poli.gamification.poliplaygami.Juegos.JuegoBuscarJavier;
 import co.edu.poli.gamification.poliplaygami.Juegos.JuegoCalculadora;
 import co.edu.poli.gamification.poliplaygami.Modelo.Usuario;
 import co.edu.poli.gamification.poliplaygami.R;
@@ -59,7 +60,10 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-
+    public void toJavier(View view){
+        Intent i = new Intent(this, JuegoBuscarJavier.class);
+        startActivity(i);
+    }
     private void login(){
         final String username = usernameLogin.getText().toString().trim();
         final String password = passwordLogin.getText().toString().trim();

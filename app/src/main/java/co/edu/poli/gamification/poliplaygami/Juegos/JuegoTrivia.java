@@ -429,13 +429,13 @@ public class JuegoTrivia extends AppCompatActivity{
         enunciadoPregunta = (TextView) findViewById(R.id.enunPreg);
         enunciadoPregunta.setMovementMethod(new ScrollingMovementMethod());
         respues1 = (Button) findViewById(R.id.opcionRes1);
-        respues1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+        //respues1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         respues2 = (Button) findViewById(R.id.opcionRes2);
-        respues2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+        //respues2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         respues3 = (Button) findViewById(R.id.opcionRes3);
-        respues3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+        //respues3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         respues4 = (Button) findViewById(R.id.opcionRes4);
-        respues4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+        //respues4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
 
         Utiles.startCon = System.currentTimeMillis();
         start = System.currentTimeMillis();
@@ -454,7 +454,7 @@ public class JuegoTrivia extends AppCompatActivity{
     }
 
     public void nextScreen (final View vista){
-        vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+        //vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
         waiter.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -467,21 +467,21 @@ public class JuegoTrivia extends AppCompatActivity{
         }
         else if(opcionPulsada.getText().toString() != respuestas[randy]){
         }
-        vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+        //vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         screens++;
         if(screens == 3){
             respues1.setEnabled(false);
             respues1.setText("");
-            respues1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            //respues1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             respues2.setEnabled(false);
             respues2.setText("");
-            respues2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            //respues2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             respues3.setEnabled(false);
             respues3.setText("");
-            respues3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            //respues3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             respues4.setEnabled(false);
             respues4.setText("");
-            respues4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            //respues4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             if(puntaje >= 2 && Login.user.getLevel().equals("1")){
                 if(puntaje == 3) {
                     guardarRes(1, "2", 1);

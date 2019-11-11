@@ -25,5 +25,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/footer_intro_curso"
-        app:srcCompat="@drawable/boton_adelante" />
+        app:srcCompat="@drawable/boton_siguiente" />
 </android.support.constraint.ConstraintLayout>

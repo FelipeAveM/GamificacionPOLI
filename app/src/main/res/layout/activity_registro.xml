@@ -4,28 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_principal"
+    android:background="@drawable/fondo_log_reg"
     tools:context="co.edu.poli.gamification.poliplaygami.Secuencia.Registro">
-
-    <ImageView
-        android:id="@+id/titulo_poli_registro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/titulo_registro_registro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_poli_azul" />
-
-    <ImageView
-        android:id="@+id/titulo_registro_registro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/header_registro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_poli_registro"
-        app:srcCompat="@drawable/titulo_registro" />
 
     <android.support.constraint.Guideline
         android:id="@+id/header_registro"
@@ -130,10 +110,10 @@
         android:id="@+id/btn_registro_registro"
         android:layout_width="213dp"
         android:layout_height="42dp"
-        android:background="@drawable/rectangulo_boton_oscuro"
+        android:background="@drawable/rectangulo_azul"
         android:text="@string/btn_registro"
         android:textColor="@color/colorWhite"
-        android:textSize="22sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

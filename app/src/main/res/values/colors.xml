@@ -12,4 +12,9 @@
     <color name="colorBlue">#19B7DA</color>
     <color name="colorGreyDisCl">#C5C5C5</color>
     <color name="colorGreyDisOs">#818181</color>
+    <color name="silla1">#1FB2DE</color>
+    <color name="silla2">#FBAF17</color>
+    <color name="silla3">#EC0677</color>
+    <color name="silla4">#A6CE38</color>
+    <color name="silla5">#0F385A</color>
 </resources>

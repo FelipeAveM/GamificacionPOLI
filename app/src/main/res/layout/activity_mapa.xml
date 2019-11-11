@@ -4,57 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_principal"
+    android:background="@drawable/fondoazul"
     tools:context=".Secuencia.Mapa">
-
-    <TextView
-        android:id="@+id/resumen_datos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RESUMEN DE USUARIO"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/nombre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/open_sans_light"
         android:text="TextView"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/roll"
+        app:layout_constraintEnd_toStartOf="@+id/roll"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resumen_datos" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/materia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/open_sans_light"
         android:text="TextView"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roll" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roll"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/roll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/open_sans_light"
         android:text="TextView"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/materia"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+        app:layout_constraintEnd_toStartOf="@+id/materia"
+        app:layout_constraintStart_toEndOf="@+id/nombre"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline5"
@@ -83,6 +73,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/circulo_boton_claro"
         android:onClick="nivel5"
         android:text="Nivel 5"
@@ -145,9 +136,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/open_sans_light"
         android:text="Puntuación: 0"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/insignias"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
@@ -157,24 +149,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/open_sans_light"
         android:text="TextView"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/rectangulo_letra"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ranking"
         android:onClick="goRanking"
-        android:text="Ranking"
         android:textColor="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

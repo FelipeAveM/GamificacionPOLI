@@ -54,6 +54,7 @@ public class SeleccionarRol extends AppCompatActivity {
     }
     public void asignarMiniRoles(){
         if(Login.user.getSignature().equals("Proceso Administrativo") || Login.user.getSignature().equals("Pensamiento Algoritmico")){
+            /*
             rolM1.setImageDrawable(getDrawable(R.drawable.sel_izq_explorador));
             rolF1.setImageDrawable(getDrawable(R.drawable.sel_der_explorador));
             rolM2.setImageDrawable(getDrawable(R.drawable.sel_izq_filantropo));
@@ -66,6 +67,7 @@ public class SeleccionarRol extends AppCompatActivity {
             rolF5.setImageDrawable(getDrawable(R.drawable.sel_der_revolucionaria));
             rolM6.setImageDrawable(getDrawable(R.drawable.sel_izq_comunicador));
             rolF6.setImageDrawable(getDrawable(R.drawable.sel_der_comunicadora));
+            */
         }
         /*else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
             rolF1.setEnabled(false);

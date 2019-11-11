@@ -90,7 +90,7 @@ public class JuegoAhorcado extends AppCompatActivity {
         hideWord = (TextView) findViewById(R.id.hideWord);
         showEnum = (TextView) findViewById(R.id.showEnun);
         animador = (ImageView) findViewById(R.id.animacion);
-        animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado0));
+        animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_uno));
 
         palabraRandom();
         enunciadoRand();
@@ -255,28 +255,28 @@ public class JuegoAhorcado extends AppCompatActivity {
     public void cambioImagen() {
         switch (intentos) {
             case 6:
-                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado1));
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_uno));
                 break;
             case 5:
-                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado2));
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_dos));
                 break;
             case 4:
-                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado3));
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_tres));
                 break;
             case 3:
-                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado4));
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_cuatro));
                 break;
             case 2:
-                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado5));
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_cinco));
                 break;
             case 1:
-                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado6));
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_seis));
                 break;
             case 0:
-                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado7));
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_siete));
                 break;
             default:
-                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado0));
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_uno));
         }
     }
 

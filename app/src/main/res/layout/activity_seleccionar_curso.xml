@@ -5,19 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_principal"
+    android:background="@drawable/fondo"
     tools:context=".Secuencia.SeleccionarCurso">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/blankSpace"
-        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_poli_blanco" />
 
     <android.support.constraint.Guideline
         android:id="@+id/footer_crucigrama"
@@ -32,17 +21,17 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:contentDescription="@string/blankSpace"
-        android:onClick="selPensamiento"
-        app:layout_constraintBottom_toTopOf="@+id/btn_admin"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/boton_ambiental" />
 
     <ImageButton
         android:id="@+id/btn_admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/blankSpace"
         android:onClick="selAdmin"

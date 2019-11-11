@@ -82,55 +82,30 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/boton_login"
-        android:text="@string/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ingresar"
         android:textColor="@color/colorWhite"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/footerLogin"
+        app:layout_constraintBottom_toTopOf="@+id/msj_no_registro2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spaceLoginBottom" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/footerLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.90" />
-
-    <TextView
-        android:id="@+id/msj_no_registro1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginStart="32dp"
-        android:text="@string/text_noRegis"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/msj_no_registro2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/footerLogin" />
 
     <TextView
         android:id="@+id/msj_no_registro2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/text_registAqui"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/usuario"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/msj_no_registro1"
-        app:layout_constraintTop_toTopOf="@+id/footerLogin" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <ProgressBar
         android:id="@+id/progressBarLogin"
@@ -142,6 +117,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:onClick="toJavier"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
