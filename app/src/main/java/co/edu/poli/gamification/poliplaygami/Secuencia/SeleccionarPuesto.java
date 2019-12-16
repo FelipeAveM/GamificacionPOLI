@@ -161,7 +161,7 @@ public class SeleccionarPuesto extends AppCompatActivity {
             HashMap<String, String> params = new HashMap<>();
             params.put("codigo", Login.user.getCode());
             params.put("grupo", groupAdd);
-            params.put("gruporeal", groupAdd.substring(0,-1));
+            params.put("gruporeal", groupAdd.substring(0,groupAdd.length()-1));
             return requestHandler.sendPostRequest(Api.URL_ADD_GROUP, params);
         }
     }

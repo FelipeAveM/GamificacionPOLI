@@ -6,7 +6,7 @@ public class Api {
 
     //private static final String SERVER_URL = "192.168.0.9";
     private static final String SERVER_URL = "poliplay.gq";
-    //public static final String ROOT_URL = "http://localhost/prueba/Api.php?apicall=";
+    //public static final String ROOT_URL = "http://192.168.0.4/prueba/Api.php?apicall=";
     public static final String ROOT_URL = "https://"+SERVER_URL+"/PoliPlayApi/Api.php?apicall=";
 
     public static final String URL_REGISTER_USER = ROOT_URL + "registrousuario";
