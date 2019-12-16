@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    android:background="@drawable/seleccion_personaje"
+    android:background="@drawable/fondo_transportes"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,6 +12,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="300dp"
         android:layout_height="480dp"
+        android:layout_marginTop="125dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,107 +20,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/transp1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/boton_alas"
+            android:contentDescription="@string/Transporte1"
+            android:onClick="btnSelTrans" />
+
+        <ImageView
+            android:id="@+id/transp2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/boton_barco"
+            android:contentDescription="@string/Transporte2"
+            android:onClick="btnSelTrans" />
+
+        <ImageView
+            android:id="@+id/transp3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/boton_globo"
+            android:contentDescription="@string/Transporte3"
+            android:onClick="btnSelTrans" />
+
+        <ImageView
+            android:id="@+id/transp4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/boton_balsa_1"
+            android:contentDescription="@string/Transporte5"
+            android:onClick="btnSelTrans"/>
+
+        <ImageView
+            android:id="@+id/transp5"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            android:showDividers="none">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/boton_balsa"
+            android:contentDescription="@string/Transporte5"
+            android:onClick="btnSelTrans" />
 
-            <ImageView
-                android:id="@+id/transp1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/Transporte1"
-                android:onClick="btnSelTrans"
-                app:srcCompat="@color/colorPrimaryDark" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            android:showDividers="none">
-
-            <ImageView
-                android:id="@+id/transp2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/Transporte2"
-                android:onClick="btnSelTrans"
-                app:srcCompat="@color/colorPrimary" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            android:showDividers="none">
-
-            <ImageView
-                android:id="@+id/transp3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/Transporte3"
-                android:onClick="btnSelTrans"
-                app:srcCompat="@color/colorPrimaryDark" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            android:showDividers="none">
-
-            <ImageView
-                android:id="@+id/transp4"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/Transporte4"
-                android:onClick="btnSelTrans"
-                app:srcCompat="@color/colorPrimary" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            android:showDividers="none">
-
-            <ImageView
-                android:id="@+id/transp5"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/Transporte5"
-                android:onClick="btnSelTrans"
-                app:srcCompat="@color/colorPrimaryDark" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            android:showDividers="none">
-
-            <ImageView
-                android:id="@+id/transp6"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:contentDescription="@string/Transporte6"
-                android:onClick="btnSelTrans"
-                app:srcCompat="@color/colorPrimary" />
-
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/transp6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/boton_tronco"
+            android:contentDescription="@string/Transporte6"
+            android:onClick="btnSelTrans" />
 
     </LinearLayout>
 

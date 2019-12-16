@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import co.edu.poli.gamification.poliplaygami.Juegos.JuegoAhorcado;
+import co.edu.poli.gamification.poliplaygami.Juegos.JuegoBuscarJavier;
 import co.edu.poli.gamification.poliplaygami.Juegos.JuegoCalculadora;
 import co.edu.poli.gamification.poliplaygami.Juegos.JuegoCrucigrama;
 import co.edu.poli.gamification.poliplaygami.Juegos.JuegoRelacionar;
@@ -18,7 +19,7 @@ import co.edu.poli.gamification.poliplaygami.R;
 
 public class Mapa extends AppCompatActivity {
 
-    private TextView nombre, materia, rol, monedas, insignias;
+    private TextView nombre, rol, monedas, insignias;
     private Button btnNivel1, btnNivel2, btnNivel3, btnNivel4, btnNivel5;
 
     @Override
@@ -27,7 +28,6 @@ public class Mapa extends AppCompatActivity {
         setContentView(R.layout.activity_mapa);
         Utiles.startCon = System.currentTimeMillis();
         nombre = (TextView)findViewById(R.id.nombre);
-        materia = (TextView)findViewById(R.id.materia);
         rol = (TextView)findViewById(R.id.roll);
         monedas = (TextView)findViewById(R.id.monedas);
         insignias = (TextView)findViewById(R.id.insignias);
@@ -50,16 +50,19 @@ public class Mapa extends AppCompatActivity {
         btnNivel5 = (Button)findViewById(R.id.btnNivel5);
 
         nombre.setText("Nombre: " + Login.user.getUsername().substring(0,1) + Login.user.getUsername().substring(1));
-        materia.setText("Materia: " + Login.user.getSignature());
         rol.setText("Rol: " + Login.user.getRole());
         monedas.setText("Monedas: " + Login.user.getCoins());
         insignias.setText("Insignias: " + Login.user.getBadges());
 
-        enableButton(Login.user.getLevel());
+        //enableButton(Login.user.getLevel());
     }
 
     ////
     public void nivel1(View view){
+        Intent i = new Intent(this, JuegoAhorcado.class);
+        Utiles.terminarConexion();
+        startActivity(i);
+        /*
         if(Login.user.getSignature().equals("Proceso Administrativo")){
             int aleatorio = (int)(Math.random()*2);
             if(aleatorio == 0){
@@ -78,9 +81,14 @@ public class Mapa extends AppCompatActivity {
             Utiles.terminarConexion();
             startActivity(i);
         }
+                */
     }
 
     public void nivel2(View view){
+        Intent i = new Intent(this, JuegoTrivia.class);
+        Utiles.terminarConexion();
+        startActivity(i);
+        /*
         if(Login.user.getSignature().equals("Proceso Administrativo")){
             int aleatorio = (int)(Math.random()*2);
             if(aleatorio == 0){
@@ -99,9 +107,15 @@ public class Mapa extends AppCompatActivity {
             Utiles.terminarConexion();
             startActivity(i);
         }
+
+         */
     }
 
     public void nivel3(View view){
+        Intent i = new Intent(this, JuegoCrucigrama.class);
+        Utiles.terminarConexion();
+        startActivity(i);
+        /*
         if(Login.user.getSignature().equals("Proceso Administrativo")){
             Intent i = new Intent(this, JuegoAhorcado.class);
             Utiles.terminarConexion();
@@ -112,6 +126,7 @@ public class Mapa extends AppCompatActivity {
             Utiles.terminarConexion();
             startActivity(i);
         }
+         */
     }
 
     public void nivel4(View view){
@@ -121,6 +136,10 @@ public class Mapa extends AppCompatActivity {
     }
 
     public void nivel5(View view){
+        Intent i = new Intent(this, JuegoRelacionar.class);
+        Utiles.terminarConexion();
+        startActivity(i);
+        /*
         if(Login.user.getSignature().equals("Proceso Administrativo")){
             Intent i = new Intent(this, JuegoAhorcado.class);
             Utiles.terminarConexion();
@@ -131,6 +150,7 @@ public class Mapa extends AppCompatActivity {
             Utiles.terminarConexion();
             startActivity(i);
         }
+        */
     }
 
     public void enableButton(String nivel){
@@ -140,7 +160,7 @@ public class Mapa extends AppCompatActivity {
             btnNivel3.setEnabled(false);
             btnNivel4.setEnabled(false);
             btnNivel5.setEnabled(false);
-            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+            //btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
             btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
@@ -153,7 +173,7 @@ public class Mapa extends AppCompatActivity {
             btnNivel4.setEnabled(false);
             btnNivel5.setEnabled(false);
             btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            //btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
@@ -166,7 +186,7 @@ public class Mapa extends AppCompatActivity {
             btnNivel5.setEnabled(false);
             btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+            //btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
             btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
         }
@@ -179,7 +199,7 @@ public class Mapa extends AppCompatActivity {
             btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            //btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
         }
         else if(nivel.equals("5")){
@@ -192,7 +212,7 @@ public class Mapa extends AppCompatActivity {
             btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+            //btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         }
     }
 

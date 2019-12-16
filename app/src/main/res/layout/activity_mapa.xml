@@ -11,40 +11,27 @@
         android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/open_sans_light"
         android:text="TextView"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/roll"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/materia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:fontFamily="@font/open_sans_light"
-        android:text="TextView"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/roll"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/roll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/open_sans_light"
         android:text="TextView"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/materia"
-        app:layout_constraintStart_toEndOf="@+id/nombre"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline5"
@@ -55,81 +42,73 @@
 
     <Button
         android:id="@+id/btnNivel3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/circulo_boton_claro"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/crucigrama"
         android:onClick="nivel3"
-        android:text="Nivel 3"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnNivel1"
+        app:layout_constraintBottom_toTopOf="@+id/btnNivel2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNivel5" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNivel4" />
 
     <Button
         android:id="@+id/btnNivel5"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/circulo_boton_claro"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/relacionar"
         android:onClick="nivel5"
-        android:text="Nivel 5"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnNivel4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monedas" />
+
+    <Button
+        android:id="@+id/btnNivel1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/encuentra"
+        android:onClick="nivel1"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNivel2" />
+
+    <Button
+        android:id="@+id/btnNivel4"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ahorcado"
+        android:onClick="nivel4"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnNivel3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
-
-    <Button
-        android:id="@+id/btnNivel1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/circulo_boton_claro"
-        android:onClick="nivel1"
-        android:text="Nivel 1"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNivel3" />
-
-    <Button
-        android:id="@+id/btnNivel4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/circulo_boton_oscuro"
-        android:onClick="nivel4"
-        android:text="Nivel 4"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnNivel2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNivel5" />
 
     <Button
         android:id="@+id/btnNivel2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/circulo_boton_oscuro"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/trivia"
         android:onClick="nivel2"
-        android:text="Nivel 2"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnNivel1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNivel4" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNivel3" />
 
     <TextView
         android:id="@+id/monedas"

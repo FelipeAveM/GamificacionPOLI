@@ -36,22 +36,22 @@ public class SeleccionarTransportePopUp extends Activity {
 
         if (Login.user.getSignature().equals("Proceso Administrativo") || Login.user.getSignature().equals("Pensamiento Algoritmico")) {
             if (transporteSeleccionado.equals("Transporte 1"))    {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_alas));
+                transporte.setImageDrawable(getDrawable(R.drawable.fondo_alas));
             }
             else if (transporteSeleccionado.equals("Transporte 2"))    {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_barco));
+                transporte.setImageDrawable(getDrawable(R.drawable.fondo_barco));
             }
             else if (transporteSeleccionado.equals("Transporte 3")) {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_globo));
+                transporte.setImageDrawable(getDrawable(R.drawable.fondo_globo));
             }
             else if (transporteSeleccionado.equals("Transporte 4")) {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_balsa));
+                transporte.setImageDrawable(getDrawable(R.drawable.fondo_balsa));
             }
             else if (transporteSeleccionado.equals("Transporte 5")) {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_submarino));
+                transporte.setImageDrawable(getDrawable(R.drawable.fondo_submarino));
             }
             else if (transporteSeleccionado.equals("Transporte 6")) {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_tronco));
+                transporte.setImageDrawable(getDrawable(R.drawable.fondo_tronco));
             }
         }
         else if (Login.user.getSignature().equals("Pensamiento Algoritmico")) {

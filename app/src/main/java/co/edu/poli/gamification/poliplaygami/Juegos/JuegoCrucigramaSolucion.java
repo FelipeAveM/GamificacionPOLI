@@ -43,12 +43,9 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        enunciadoSol = (TextView)findViewById(R.id.enunciadoSol);
         llenarPosicionesValidas();
         pintarCuadricula();
-
-        enunciadoSol = (TextView)findViewById(R.id.enunciadoSol);
-        enunciadoSol.setText("Bien hecho");
-
         onBackPressed();
     }
 
@@ -98,34 +95,44 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
         if(correct >= prom && Login.user.getLevel().equals("2")){
             if(total == correct) {
                 guardarRes(2, "3", time, 1);
+                enunciadoSol.setText("Muy bien, obtienes dos monedas y una insignia.");
             }
             else{
                 guardarRes(2, "3", time, 0);
+                enunciadoSol.setText("Muy bien, obtienes dos monedas.");
             }
         }
         else if(correct >= prom && Login.user.getLevel().equals("5")){
             if(total == correct) {
                 guardarRes(5, "FIN", time, 1);
+                enunciadoSol.setText("Muy bien, obtienes cinco monedas y una insignia.");
             }
             else{
                 guardarRes(5, "FIN", time, 0);
+                enunciadoSol.setText("Muy bien, obtienes cinco monedas.");
             }
         }
         else if(correct < prom && Login.user.getLevel().equals("2")){
             guardarRes(0, "3", time, 0);
+            enunciadoSol.setText("Es una pena... no obtienes ninguna moneda");
         }
         else if(correct < prom && Login.user.getLevel().equals("5")){
             guardarRes(0, "FIN", time, 0);
+            enunciadoSol.setText("Es una pena... no obtienes ninguna moneda");
         }
         else if(Login.user.getLevel().equals("FIN")){
             if(correct < prom){
                 guardarRes(0, "FIN", time, 0);
+                enunciadoSol.setText("Es una pena... no obtienes ninguna moneda");
             }
             else if(correct >= prom){
                 guardarRes(1, "FIN", time, 0);
+                enunciadoSol.setText("Muy bien, obtienes una moneda.");
             }
-            else guardarRes(0, "FIN", time, 0);;
-
+            else{
+                guardarRes(1, "FIN", time, 0);
+                enunciadoSol.setText("Muy bien, obtienes una moneda.");
+            }
         }
     }
 

@@ -62,26 +62,28 @@ public class JuegoCalculadora extends AppCompatActivity {
 
                         int mon = Integer.parseInt(grupo);
                         if(mon >= 75){
-                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.transporte_submarino));
+                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.fondo_submarino));
                         }
                         else if(mon >= 60){
-                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.transporte_barco));
+                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.fondo_barco));
                         }
                         else if(mon >= 45){
-                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.transporte_globo));
+                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.fondo_globo));
                         }
                         else if(mon >= 30){
-                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.transporte_balsa));
+                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.fondo_balsa));
                         }
                         else if(mon >= 15){
-                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.transporte_tronco));
+                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.fondo_tronco));
                         }
                         else if(mon >= 1){
-                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.transporte_alas));
+                            transporte.setImageDrawable(getResources().getDrawable(R.drawable.fondo_alas));
                         }
+                        //Del mejor al peor
                     } else {
                         Toast.makeText(JuegoCalculadora.this, "Error de parámetros", Toast.LENGTH_SHORT).show();
                     }
+                    //Esta versión
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

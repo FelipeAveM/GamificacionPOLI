@@ -7,26 +7,11 @@
     android:layout_height="match_parent"
     tools:context="co.edu.poli.gamification.poliplaygami.Juegos.JuegoBuscarJavier">
 
-    <android.support.v4.widget.NestedScrollView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:background="@drawable/fondo_encuentra_javier">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/mapa_isla" />
-            </HorizontalScrollView>
-        </ScrollView>
-    </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

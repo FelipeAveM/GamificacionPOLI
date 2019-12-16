@@ -174,34 +174,42 @@ public class JuegoAhorcado extends AppCompatActivity {
                 }
             };
             hideWord.setText("Solucionado");
+            animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado_ganador));
             timend = System.currentTimeMillis();
             long totaltimes = (timend - timestart) / 1000;
             if(Login.user.getLevel().equals("3")) {
                 if(totaltimes <= 30){
                     guardarRes(3, "4", 1);
+                    hideWord.setText("Obtuviste 3 monedas.");
                 }
                 else{
                     guardarRes(3, "4", 0);
+                    hideWord.setText("Obtuviste 3 monedas.");
                 }
             }
             else if(Login.user.getLevel().equals("4")){
                 if(totaltimes <= 30) {
                     guardarRes(4, "5", 1);
+                    hideWord.setText("Obtuviste 4 monedas.");
                 }
                 else{
                     guardarRes(4, "5", 0);
+                    hideWord.setText("Obtuviste 4 monedas.");
                 }
             }
             else if(Login.user.getLevel().equals("5")){
                 if(totaltimes <= 30) {
                     guardarRes(5, "FIN", 1);
+                    hideWord.setText("Obtuviste 5 monedas.");
                 }
                 else{
                     guardarRes(5, "FIN", 0);
+                    hideWord.setText("Obtuviste 5 monedas.");
                 }
             }
             else if(Login.user.getLevel().equals("FIN")){
                 guardarRes(1, "FIN", 0);
+                hideWord.setText("Obtuviste 1 moneda.");
             }
             waiter.postDelayed(runner, 2500);
         }

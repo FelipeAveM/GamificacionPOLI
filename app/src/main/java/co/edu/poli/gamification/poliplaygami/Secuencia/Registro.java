@@ -26,9 +26,8 @@ public class Registro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-
         emailR = (EditText)findViewById(R.id.email_registro);
-        userR = (EditText)findViewById(R.id.usuario_registro);
+        userR = (EditText)findViewById(R.id.email_registro);
         codeR = (EditText)findViewById(R.id.codigo_registro);
         pass1 =(EditText)findViewById(R.id.clave_uno_registro);
         pass2 =(EditText)findViewById(R.id.clave_dos_registro);
@@ -44,19 +43,32 @@ public class Registro extends AppCompatActivity {
 
     private void createUser() {
         final String email = emailR.getText().toString().trim();
-        final String user = userR.getText().toString().trim();
         final String code = codeR.getText().toString().trim();
         final String passU = pass1.getText().toString().trim();
         final String passD = pass2.getText().toString().trim();
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailR.setError("Por favor ingresa un email válido.");
+        String usuario = "";
+        String intsEmail = "@poligran.edu.co";
+        String verEmail = "";
+        char [] veriEmail = new char[16];
+        if(email.length() > intsEmail.length()) {
+            for (int i = 1; i < intsEmail.length() + 1; i++) {
+                veriEmail[intsEmail.length() - i] = email.charAt(email.length() - i);
+            }
+            verEmail =  String.copyValueOf(veriEmail);
+            if (!intsEmail.equals(verEmail)) {
+                emailR.setError("Por favor ingresa un correo institucional.");
+                emailR.requestFocus();
+                return;
+            }
+        }
+
+        if(email.length() <= intsEmail.length()){
+            emailR.setError("Por favor ingresa un correo institucional.");
             emailR.requestFocus();
             return;
         }
-        if (TextUtils.isEmpty(user)) {
-            userR.setError("Ingresa un nombre de usuario.");
-            userR.requestFocus();
-            return;
+        for (int i = 0; i < email.length()-16; i++) {
+            usuario += email.charAt(i);
         }
         if (TextUtils.isEmpty(code)) {
             codeR.setError("Ingresa un código");
@@ -73,6 +85,7 @@ public class Registro extends AppCompatActivity {
             pass2.requestFocus();
             return;
         }
+        final String user = usuario;
 
         class RegisterUser extends AsyncTask<Void, Void, String> {
 
@@ -109,7 +122,7 @@ public class Registro extends AppCompatActivity {
                 super.onPostExecute(s);
                 try{
                     finish();
-                    Toast.makeText(Registro.this, "¡Registro Exitoso!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registro.this, "¡Registrando...!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), Login.class));
                 }catch (Exception e){
                     e.printStackTrace();

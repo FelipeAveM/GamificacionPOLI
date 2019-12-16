@@ -23,6 +23,7 @@ public class SeleccionarTransporte extends AppCompatActivity {
             startActivity(i);
         }
         Utiles.startCon = System.currentTimeMillis();
+
         transp1 = (ImageView) findViewById(R.id.transp1);
         transp2 = (ImageView) findViewById(R.id.transp2);
         transp3 = (ImageView) findViewById(R.id.transp3);
@@ -30,7 +31,7 @@ public class SeleccionarTransporte extends AppCompatActivity {
         transp5 = (ImageView) findViewById(R.id.transp5);
         transp6 = (ImageView) findViewById(R.id.transp6);
 
-        asignarTransportes();
+        //asignarTransportes();
     }
     public void asignarTransportes(){
         if(Login.user.getSignature().equals("Proceso Administrativo")){
