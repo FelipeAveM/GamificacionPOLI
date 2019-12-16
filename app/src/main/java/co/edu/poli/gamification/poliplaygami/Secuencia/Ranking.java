@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -49,31 +51,30 @@ public class Ranking extends AppCompatActivity {
                     JSONObject obj = new JSONObject(s);
                     if (!obj.getBoolean("error")) {
                         //Toast.makeText(JuegoCalculadora.this, obj.getString("message"), Toast.LENGTH_SHORT).show();
-                        JSONObject arrJson = obj.getJSONObject("grupos");
+                        Log.d("sdfs", "asdas");
+                        JSONArray arrJson = obj.getJSONArray("grupos");
+                        Log.d("sdfs", arrJson.toString());
                         String listaGrupos = arrJson.toString();
                         StringTokenizer tok = new StringTokenizer(listaGrupos.substring(1, listaGrupos.length()-1) ,",");
                         String something = "GRUPOS\n\n";
-                        while(tok.hasMoreElements()){
-                            String token = "GRUPO " + tok.nextToken().replaceAll(String.valueOf((char)34), "");
-                            StringTokenizer tok2 = new StringTokenizer(token, ":");
+                        for (int i = 0 ; i < arrJson.length(); i++){
+                            String token = "GRUPO " + arrJson.getJSONObject(i).getInt("grupo");
+                            String monedas = arrJson.getJSONObject(i).getString("monedas") + " monedas";
 
-                            String st1 = tok2.nextToken();
-
-                            String st2 = tok2.nextToken() + " monedas";
-                            if(st1.length() == 7){
-                                something += st1 + ":     " + st2+"\n";
+                            if(token.length() == 7){
+                                something += token + ":     " + monedas+"\n";
                             }
-                            else if(st1.length() == 8){
-                                something += st1 + ":    " + st2+"\n";
+                            else if(token.length() == 8){
+                                something += token + ":    " + monedas+"\n";
                             }
-                            else if(st1.length() == 9){
-                                something += st1 + ":   " + st2+"\n";
+                            else if(token.length() == 9){
+                                something += token + ":   " + monedas+"\n";
                             }
                             else{
-                                something += st1 + ":  " + st2+"\n";
+                                something += token + ":  " + monedas+"\n";
                             }
-
                         }
+
                         monedasGrupo.setText(something);
                         //JSONObject arrJson = obj.getJSONObject("grupos");
                         //String group = Login.user.getGroup();
