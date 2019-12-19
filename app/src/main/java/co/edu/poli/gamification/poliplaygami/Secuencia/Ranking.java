@@ -1,12 +1,18 @@
 package co.edu.poli.gamification.poliplaygami.Secuencia;
 
+
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,7 +20,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.StringTokenizer;
 
 import co.edu.poli.gamification.poliplaygami.R;
 import co.edu.poli.gamification.poliplaygami.Servicios.Api;
@@ -24,15 +29,16 @@ public class Ranking extends AppCompatActivity {
 
     public TextView monedasGrupo;
     public Button volverMapa;
+    public LinearLayout contenerRanking;
+    public Context context = this;
+    public int [] paletaColores  = {R.color.silla1, R.color.silla2, R.color.silla3, R.color.silla4, R.color.silla5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
-        monedasGrupo = (TextView)findViewById(R.id.monedasGrupo);
         volverMapa = (Button)findViewById(R.id.volverMapa);
-
-        monedasGrupo.setText("Cargando Ranking...");
+        contenerRanking = (LinearLayout)findViewById(R.id.containerRanking);
         cargarMonedasGrupo();
     }
 
@@ -51,31 +57,36 @@ public class Ranking extends AppCompatActivity {
                     JSONObject obj = new JSONObject(s);
                     if (!obj.getBoolean("error")) {
                         //Toast.makeText(JuegoCalculadora.this, obj.getString("message"), Toast.LENGTH_SHORT).show();
-                        Log.d("sdfs", "asdas");
-                        JSONArray arrJson = obj.getJSONArray("grupos");
-                        Log.d("sdfs", arrJson.toString());
-                        String listaGrupos = arrJson.toString();
-                        StringTokenizer tok = new StringTokenizer(listaGrupos.substring(1, listaGrupos.length()-1) ,",");
-                        String something = "GRUPOS\n\n";
-                        for (int i = 0 ; i < arrJson.length(); i++){
-                            String token = "GRUPO " + arrJson.getJSONObject(i).getInt("grupo");
-                            String monedas = arrJson.getJSONObject(i).getString("monedas") + " monedas";
 
-                            if(token.length() == 7){
-                                something += token + ":     " + monedas+"\n";
-                            }
-                            else if(token.length() == 8){
-                                something += token + ":    " + monedas+"\n";
-                            }
-                            else if(token.length() == 9){
-                                something += token + ":   " + monedas+"\n";
-                            }
-                            else{
-                                something += token + ":  " + monedas+"\n";
-                            }
+                        JSONArray arrJson = obj.getJSONArray("grupos");
+                        int  indice = 0;
+                        for (int i = 0 ; i < arrJson.length(); i++){
+
+                            LinearLayout horizontallHelp = new LinearLayout(context);
+                            horizontallHelp.setLayoutParams(new LinearLayout.LayoutParams(
+                                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                            horizontallHelp.setOrientation(LinearLayout.HORIZONTAL);
+
+
+
+                            TextView grupo = new TextView(context);
+                            TextView monedas = new TextView(context);
+                            TextView insignias = new TextView(context);
+
+                            setParamsTextView( grupo, arrJson.getJSONObject(i).getInt("grupo") + "", indice);
+                            setParamsTextView( monedas, arrJson.getJSONObject(i).getString("monedas"), indice);
+                            setParamsTextView( insignias, arrJson.getJSONObject(i).getString("insignias"), indice);
+
+                            horizontallHelp.addView(grupo);
+                            horizontallHelp.addView(monedas);
+                            horizontallHelp.addView(insignias);
+
+                            contenerRanking.addView(horizontallHelp);
+                            indice ++;
+                            indice%=paletaColores.length;
+
                         }
 
-                        monedasGrupo.setText(something);
                         //JSONObject arrJson = obj.getJSONObject("grupos");
                         //String group = Login.user.getGroup();
                         //String grupo = arrJson.getString(group.substring(0, group.length()-1));
@@ -98,6 +109,20 @@ public class Ranking extends AppCompatActivity {
         ObtenerMonedas om = new ObtenerMonedas();
         om.execute();
     }
+
+    private void setParamsTextView(TextView textView, String texto, int  indiceColor) {
+
+        textView.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+        textView.setTypeface(ResourcesCompat.getFont(context,R.font.open_sans_light), Typeface.BOLD);
+
+        textView.setTextColor(getResources().getColor(paletaColores[indiceColor]));
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,22);
+        textView.setGravity(Gravity.CENTER);
+        textView.setText(texto);
+    }
+
 
     public void volverMapa(View view){
         Intent i = new Intent(this, Mapa.class);

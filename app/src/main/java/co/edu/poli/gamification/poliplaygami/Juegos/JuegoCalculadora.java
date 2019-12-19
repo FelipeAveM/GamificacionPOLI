@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -54,10 +55,15 @@ public class JuegoCalculadora extends AppCompatActivity {
                     JSONObject obj = new JSONObject(s);
                     if (!obj.getBoolean("error")) {
                         //Toast.makeText(JuegoCalculadora.this, obj.getString("message"), Toast.LENGTH_SHORT).show();
-
-                        JSONObject arrJson = obj.getJSONObject("grupos");
                         String group = Login.user.getGroup();
-                        String grupo = arrJson.getString(group.substring(0, group.length()-1));
+                        JSONArray arrJson = obj.getJSONArray("grupos");
+                        String grupo = "";
+                        for (int i = 0 ; i < arrJson.length(); i++){
+                            if(group.substring(0, group.length()-1).equals(arrJson.getJSONObject(i).getInt("grupo")+""))
+                                grupo = arrJson.getJSONObject(i).getInt("grupo")+"";
+                        }
+
+
                         monedasGrupo.setText("Monedas de tu grupo: " + grupo);
 
                         int mon = Integer.parseInt(grupo);

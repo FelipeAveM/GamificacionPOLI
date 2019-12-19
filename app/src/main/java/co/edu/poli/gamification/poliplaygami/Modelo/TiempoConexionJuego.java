@@ -1,6 +1,7 @@
 package co.edu.poli.gamification.poliplaygami.Modelo;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -49,6 +50,7 @@ public class TiempoConexionJuego extends AsyncTask<Void, Void, String> {
         super.onPostExecute(s);
 
         try {
+            Log.d("asdasd", s);
             JSONObject obj = new JSONObject(s);
             if (!obj.getBoolean("error")) {
                 JSONObject userJson = obj.getJSONObject("time");
