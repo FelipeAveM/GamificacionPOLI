@@ -47,7 +47,7 @@ public class InicioViaje extends AppCompatActivity {
         }*/
         //else if(cont == 4){
         else if(cont == 3){
-            Intent i = new Intent(this, SeleccionarTransporte.class);
+            Intent i = new Intent(this, IntroTrans.class);
             Utiles.terminarConexion();
             startActivity(i);
         }

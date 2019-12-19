@@ -58,14 +58,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.76" />
+        app:layout_constraintGuide_percent="0.72" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="336dp"
-        android:layout_height="96dp"
+        android:layout_width="362dp"
+        android:layout_height="115dp"
         android:fontFamily="@font/open_sans_light"
-        android:text="Puedes seguir jugando para ganar más monedas y obtener un mejor medio de transporte para salir de la isla."
+        android:text="Este es el medio de transporte de tu grupo. Puedes seguir jugando para ganar más monedas y obtener un mejor medio de transporte para salir de la isla."
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
@@ -77,8 +77,8 @@
 
     <ImageView
         android:id="@+id/transporte"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="316dp"
+        android:layout_height="284dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -93,7 +93,7 @@
         android:id="@+id/button5"
         android:layout_width="152dp"
         android:layout_height="46dp"
-        android:background="@drawable/boton_enviar"
+        android:background="@drawable/boton_creditos"
         android:onClick="toCreditos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

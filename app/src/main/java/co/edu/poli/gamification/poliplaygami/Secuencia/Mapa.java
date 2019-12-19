@@ -166,11 +166,11 @@ public class Mapa extends AppCompatActivity {
             btnNivel3.setEnabled(false);
             btnNivel4.setEnabled(false);
             btnNivel5.setEnabled(false);
-            //btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
-            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.encuentra));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_trivia));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_crucigrama));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_ahorcado));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_relacionar));
         }
         else if(nivel.equals("2")){
             btnNivel1.setEnabled(false);
@@ -178,11 +178,11 @@ public class Mapa extends AppCompatActivity {
             btnNivel3.setEnabled(false);
             btnNivel4.setEnabled(false);
             btnNivel5.setEnabled(false);
-            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            //btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
-            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_encuentra));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.trivia));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_crucigrama));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_ahorcado));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_relacionar));
         }
         else if(nivel.equals("3")){
             btnNivel1.setEnabled(false);
@@ -190,11 +190,11 @@ public class Mapa extends AppCompatActivity {
             btnNivel3.setEnabled(true);
             btnNivel4.setEnabled(false);
             btnNivel5.setEnabled(false);
-            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            //btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
-            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_encuentra));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_trivia));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.crucigrama));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_ahorcado));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_relacionar));
         }
         else if(nivel.equals("4")){
             btnNivel1.setEnabled(false);
@@ -202,11 +202,11 @@ public class Mapa extends AppCompatActivity {
             btnNivel3.setEnabled(false);
             btnNivel4.setEnabled(true);
             btnNivel5.setEnabled(false);
-            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            //btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
-            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_encuentra));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_trivia));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_crucigrama));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.ahorcado));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_relacionar));
         }
         else if(nivel.equals("5")){
             btnNivel1.setEnabled(false);
@@ -214,11 +214,11 @@ public class Mapa extends AppCompatActivity {
             btnNivel3.setEnabled(false);
             btnNivel4.setEnabled(false);
             btnNivel5.setEnabled(true);
-            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
-            //btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_encuentra));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_trivia));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_crucigrama));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.boton_bloqueado_ahorcado));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.relacionar));
         }
             }
 
