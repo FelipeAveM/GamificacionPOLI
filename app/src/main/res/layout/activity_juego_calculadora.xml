@@ -42,7 +42,7 @@
         android:background="@drawable/boton_atras"
         android:onClick="volverMapa"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -88,4 +88,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:srcCompat="@drawable/rectangulo_letra_sel" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="152dp"
+        android:layout_height="46dp"
+        android:background="@drawable/boton_enviar"
+        android:onClick="toCreditos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/volverMapa"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </android.support.constraint.ConstraintLayout>

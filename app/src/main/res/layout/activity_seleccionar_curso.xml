@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/boton_ambiental" />
+        app:srcCompat="@drawable/boton_proceso" />
 
     <ImageButton
         android:id="@+id/btn_admin"
@@ -63,6 +63,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:srcCompat="@drawable/boton_volver" />
+        app:srcCompat="@drawable/boton_atras" />
 
 </android.support.constraint.ConstraintLayout>

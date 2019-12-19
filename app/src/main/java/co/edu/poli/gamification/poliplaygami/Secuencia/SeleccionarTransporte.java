@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import co.edu.poli.gamification.poliplaygami.Modelo.Utiles;
+import co.edu.poli.gamification.poliplaygami.Narrativa.IntroMapa;
 import co.edu.poli.gamification.poliplaygami.R;
 
 public class SeleccionarTransporte extends AppCompatActivity {
@@ -30,27 +31,6 @@ public class SeleccionarTransporte extends AppCompatActivity {
         transp4 = (ImageView) findViewById(R.id.transp4);
         transp5 = (ImageView) findViewById(R.id.transp5);
         transp6 = (ImageView) findViewById(R.id.transp6);
-
-        //asignarTransportes();
-    }
-    public void asignarTransportes(){
-        if(Login.user.getSignature().equals("Proceso Administrativo")){
-            transp1.setImageDrawable(getDrawable(R.drawable.sel_transporte_alas));
-            transp2.setImageDrawable(getDrawable(R.drawable.sel_transporte_barco));
-            transp3.setImageDrawable(getDrawable(R.drawable.sel_transporte_globo));
-            transp4.setImageDrawable(getDrawable(R.drawable.sel_transporte_balsa));
-            transp5.setImageDrawable(getDrawable(R.drawable.sel_transporte_submarino));
-            transp6.setImageDrawable(getDrawable(R.drawable.sel_transporte_tronco));
-
-        }
-        else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
-            transp1.setImageDrawable(getDrawable(R.drawable.sel_transporte_alas));
-            transp2.setImageDrawable(getDrawable(R.drawable.sel_transporte_barco));
-            transp3.setImageDrawable(getDrawable(R.drawable.sel_transporte_globo));
-            transp4.setImageDrawable(getDrawable(R.drawable.sel_transporte_balsa));
-            transp5.setImageDrawable(getDrawable(R.drawable.sel_transporte_submarino));
-            transp6.setImageDrawable(getDrawable(R.drawable.sel_transporte_tronco));
-        }
     }
     public void btnVolver(View view){
         Intent i = new Intent(this, SeleccionarRol.class);
@@ -65,7 +45,7 @@ public class SeleccionarTransporte extends AppCompatActivity {
     }
 
     public void continuar(View view) {
-        Intent i = new Intent(this, Mapa.class);
+        Intent i = new Intent(this, IntroMapa.class);
         i.putExtra("back", "no");
         startActivity(i);
     }

@@ -19,7 +19,7 @@ import co.edu.poli.gamification.poliplaygami.R;
 
 public class Mapa extends AppCompatActivity {
 
-    private TextView nombre, rol, monedas, insignias;
+    private TextView nombre, rol, monedas, insignias, grupo;
     private Button btnNivel1, btnNivel2, btnNivel3, btnNivel4, btnNivel5;
 
     @Override
@@ -31,6 +31,7 @@ public class Mapa extends AppCompatActivity {
         rol = (TextView)findViewById(R.id.roll);
         monedas = (TextView)findViewById(R.id.monedas);
         insignias = (TextView)findViewById(R.id.insignias);
+        grupo = (TextView) findViewById(R.id.idgrupo);
         if(Login.user.getLevel().equals("0")){
             guardarRes("1");
             Login.user.setLevel("1");
@@ -53,13 +54,18 @@ public class Mapa extends AppCompatActivity {
         rol.setText("Rol: " + Login.user.getRole());
         monedas.setText("Monedas: " + Login.user.getCoins());
         insignias.setText("Insignias: " + Login.user.getBadges());
-
-        //enableButton(Login.user.getLevel());
+        String grupoU = Login.user.getGroup();
+        char [] uGrupo = new char [grupoU.length() - 1];
+        for (int i = 0; i <uGrupo.length ; i++) {
+            uGrupo[i] = grupoU.charAt(i);
+        }
+        grupo.setText("Grupo: " + String.copyValueOf(uGrupo));
+        enableButton(Login.user.getLevel());
     }
 
     ////
     public void nivel1(View view){
-        Intent i = new Intent(this, JuegoAhorcado.class);
+        Intent i = new Intent(this, JuegoBuscarJavier.class);
         Utiles.terminarConexion();
         startActivity(i);
         /*
@@ -214,7 +220,7 @@ public class Mapa extends AppCompatActivity {
             btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
             //btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         }
-    }
+            }
 
     @Override
     public void onBackPressed(){

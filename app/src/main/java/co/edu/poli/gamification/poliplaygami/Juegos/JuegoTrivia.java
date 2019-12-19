@@ -7,9 +7,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import java.util.Random;
-
 import co.edu.poli.gamification.poliplaygami.Modelo.TiempoConexionJuego;
 import co.edu.poli.gamification.poliplaygami.Modelo.Utiles;
 import co.edu.poli.gamification.poliplaygami.R;
@@ -482,9 +480,13 @@ public class JuegoTrivia extends AppCompatActivity{
             respues4.setEnabled(false);
             respues4.setText("");
             //respues4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            respues1.setVisibility(View.INVISIBLE);
+            respues2.setVisibility(View.INVISIBLE);
+            respues3.setVisibility(View.INVISIBLE);
+            respues4.setVisibility(View.INVISIBLE);
             if(puntaje >= 2 && Login.user.getLevel().equals("1")){
                 if(puntaje == 3) {
-                    guardarRes(1, "2", 1);
+                    guardarRes(1, "3", 1);
                     enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
                             "\n" +
                             "\n" +
@@ -494,7 +496,7 @@ public class JuegoTrivia extends AppCompatActivity{
                             "\n" + "Obtuviste 1 insignia");
                 }
                 else{
-                    guardarRes(1, "2", 0);
+                    guardarRes(1, "3", 0);
                     enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
                             "\n" +
                             "\n" +
@@ -537,7 +539,7 @@ public class JuegoTrivia extends AppCompatActivity{
                         "\n" + "No obtuviste insignias");
             }
             else if(puntaje < 2 && Login.user.getLevel().equals("2")){
-                guardarRes(0, "3", 0);
+                guardarRes(0, "2", 0);
                 enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
                         "\n" +
                         "\n" +

@@ -53,8 +53,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/boton_balsa_1"
-            android:contentDescription="@string/Transporte5"
-            android:onClick="btnSelTrans"/>
+            android:contentDescription="@string/Transporte4"
+            android:onClick="btnSelTrans" />
 
         <ImageView
             android:id="@+id/transp5"

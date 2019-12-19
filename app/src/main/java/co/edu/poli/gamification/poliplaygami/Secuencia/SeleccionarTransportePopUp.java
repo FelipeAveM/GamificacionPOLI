@@ -54,25 +54,5 @@ public class SeleccionarTransportePopUp extends Activity {
                 transporte.setImageDrawable(getDrawable(R.drawable.fondo_tronco));
             }
         }
-        else if (Login.user.getSignature().equals("Pensamiento Algoritmico")) {
-            if (transporteSeleccionado.equals("Transporte 1"))    {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_alas));
-            }
-            else if (transporteSeleccionado.equals("Transporte 2"))    {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_barco));
-            }
-            else if (transporteSeleccionado.equals("Transporte 3")) {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_globo));
-            }
-            else if (transporteSeleccionado.equals("Transporte 4")) {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_balsa));
-            }
-            else if (transporteSeleccionado.equals("Transporte 5")) {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_submarino));
-            }
-            else if (transporteSeleccionado.equals("Transporte 6")) {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_tronco));
-            }
-        }
     }
 }

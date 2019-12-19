@@ -47,7 +47,7 @@ public class JuegoRelacionar extends AppCompatActivity {
             "Una de las actividades más importantes del directivo es la toma de decisiones, por lo consiguiente después de definir el problema la etapa que le sigue es:",
             "Una vez se ha elegido la alternativa más óptima para el proceso de toma de decisiones, el paso posterior para hacer seguimiento a los resultados es",
             "Última etapa del proceso de toma de decisiones",
-            "Técnica para identificar y definir el problema correctamente en el proceso de Toma de decisione",
+            "Técnica para identificar y definir el problema correctamente en el proceso de Toma de decisiones",
             "Proceso sistemático y racional a través del cual se selecciona entre varias alternativas el curso de acción óptimo.",
             "Conjunto de acciones que deben realizarse de forma secuencial para obtener un resultado en las mismas condiciones",
             "A través de éstos se proyectan, en forma cuantificada, los recursos que requiere la organización para cumplir con sus objetivos.",
@@ -75,7 +75,7 @@ public class JuegoRelacionar extends AppCompatActivity {
             "Plan de acción",
             "Implementación",
             "Tormenta ideas",
-            "Toma desiciones",
+            "Toma decisiones",
             "Planeación",
             "Presupuestos",
             "Normas",
@@ -323,30 +323,30 @@ public class JuegoRelacionar extends AppCompatActivity {
             intent.putExtra("sal4", target4.getText());
             intent.putExtra("sal5", target5.getText());
             intent.putExtra("sal6", target6.getText());
-            if (points >= 4 && Login.user.getLevel().equals("1")) {
+            if (points >= 4 && Login.user.getLevel().equals("5")) {
                 if (points == 6) {
-                    guardarRes(1, "2", 1);
+                    guardarRes(1, "FIN", 1);
                 } else {
-                    guardarRes(1, "2", 0);
+                    guardarRes(1, "FIN", 0);
                 }
-            } else if (points >= 4 && Login.user.getLevel().equals("2")) {
+            } else if (points >= 4 && Login.user.getLevel().equals("5")) {
                 if (points == 6) {
-                    guardarRes(2, "3", 1);
+                    guardarRes(2, "FIN", 1);
                 } else {
-                    guardarRes(2, "3", 1);
+                    guardarRes(2, "FIN", 1);
                 }
-            } else if (points >= 4 && Login.user.getLevel().equals("3")) {
+            } else if (points >= 4 && Login.user.getLevel().equals("5")) {
                 if (points == 6) {
-                    guardarRes(3, "4", 1);
+                    guardarRes(3, "FIN", 1);
                 } else {
-                    guardarRes(3, "4", 0);
+                    guardarRes(3, "FIN", 0);
                 }
-            } else if (points < 4 && Login.user.getLevel().equals("1")) {
-                guardarRes(0, "2", 0);
-            } else if (points < 4 && Login.user.getLevel().equals("2")) {
-                guardarRes(0, "3", 0);
-            } else if (points < 4 && Login.user.getLevel().equals("3")) {
-                guardarRes(0, "4", 0);
+            } else if (points < 4 && Login.user.getLevel().equals("5")) {
+                guardarRes(0, "FIN", 0);
+            } else if (points < 4 && Login.user.getLevel().equals("5")) {
+                guardarRes(0, "FIN", 0);
+            } else if (points < 4 && Login.user.getLevel().equals("5")) {
+                guardarRes(0, "FIN", 0);
             } else if (Login.user.getLevel().equals("FIN")) {
                 if(points >= 4) {
                     guardarRes(1, "FIN", 0);
