@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.edu.poli.gamification.poliplaygami">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/oldlogo_poliplay_grande"
@@ -9,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Juegos.JuegoBuscarJavier"></activity>
+        <activity android:name=".Narrativa.IntroMapa"></activity>
+        <activity android:name=".Narrativa.Creditos" />
+        <activity android:name=".Juegos.JuegoBuscarJavier" />
         <activity
             android:name=".Juegos.JuegoAyuda"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity android:name=".Secuencia.Ranking" />
         <activity android:name=".Secuencia.SeleccionarPuesto" />
         <activity
@@ -68,7 +72,5 @@
         <activity android:name=".Narrativa.InicioViaje" />
         <activity android:name=".Secuencia.PreguntasInicio" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

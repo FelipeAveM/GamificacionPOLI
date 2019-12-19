@@ -14,6 +14,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import co.edu.poli.gamification.poliplaygami.Narrativa.Creditos;
 import co.edu.poli.gamification.poliplaygami.R;
 import co.edu.poli.gamification.poliplaygami.Secuencia.Login;
 import co.edu.poli.gamification.poliplaygami.Secuencia.Mapa;
@@ -105,7 +106,10 @@ public class JuegoCalculadora extends AppCompatActivity {
         ObtenerMonedas om = new ObtenerMonedas();
         om.execute();
     }
-
+    public void toCreditos(View view){
+        Intent i = new Intent(this, Creditos.class);
+        startActivity(i);
+    }
     public void volverMapa(View view){
         Intent i = new Intent(this, Mapa.class);
         i.putExtra("back", "yes");

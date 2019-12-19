@@ -92,17 +92,17 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
         }
         int prom = (total * 60) / 100;
         String time = String.valueOf(getIntent().getExtras().getLong("time"));
-        if(correct >= prom && Login.user.getLevel().equals("2")){
+        if(correct >= prom && Login.user.getLevel().equals("3")){
             if(total == correct) {
-                guardarRes(2, "3", time, 1);
+                guardarRes(2, "4", time, 1);
                 enunciadoSol.setText("Muy bien, obtienes dos monedas y una insignia.");
             }
             else{
-                guardarRes(2, "3", time, 0);
+                guardarRes(2, "4", time, 0);
                 enunciadoSol.setText("Muy bien, obtienes dos monedas.");
             }
         }
-        else if(correct >= prom && Login.user.getLevel().equals("5")){
+        else if(correct >= prom && Login.user.getLevel().equals("FIN")){
             if(total == correct) {
                 guardarRes(5, "FIN", time, 1);
                 enunciadoSol.setText("Muy bien, obtienes cinco monedas y una insignia.");
@@ -112,11 +112,11 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
                 enunciadoSol.setText("Muy bien, obtienes cinco monedas.");
             }
         }
-        else if(correct < prom && Login.user.getLevel().equals("2")){
-            guardarRes(0, "3", time, 0);
+        else if(correct < prom && Login.user.getLevel().equals("3")){
+            guardarRes(0, "4", time, 0);
             enunciadoSol.setText("Es una pena... no obtienes ninguna moneda");
         }
-        else if(correct < prom && Login.user.getLevel().equals("5")){
+        else if(correct < prom && Login.user.getLevel().equals("FIN")){
             guardarRes(0, "FIN", time, 0);
             enunciadoSol.setText("Es una pena... no obtienes ninguna moneda");
         }
@@ -158,6 +158,8 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
 
     private void lecturaResuelto() throws Exception {
         InputStream archivo;
+        archivo = getResources().openRawResource(R.raw.field);
+        /*
         switch (numCrus){
             case 1:
                 archivo = getResources().openRawResource(R.raw.field);
@@ -169,6 +171,8 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
                 archivo = getResources().openRawResource(R.raw.field);
                 break;
         }
+
+         */
         BufferedReader llenar = new BufferedReader(new InputStreamReader(archivo));
         for (int i = 0; i < resueltoSol.length; i++) {
             String line = llenar.readLine();
