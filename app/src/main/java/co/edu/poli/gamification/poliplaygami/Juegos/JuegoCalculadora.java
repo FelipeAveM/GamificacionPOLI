@@ -61,7 +61,7 @@ public class JuegoCalculadora extends AppCompatActivity {
                         String grupo = "";
                         for (int i = 0 ; i < arrJson.length(); i++){
                             if(group.substring(0, group.length()-1).equals(arrJson.getJSONObject(i).getInt("grupo")+""))
-                                grupo = arrJson.getJSONObject(i).getInt("grupo")+"";
+                                grupo = arrJson.getJSONObject(i).getInt("monedas")+"";
                         }
 
 
