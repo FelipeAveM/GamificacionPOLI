@@ -200,7 +200,7 @@ public class JuegoAhorcado extends AppCompatActivity {
                     alMapa();
                 }
             };
-            hideWord.setText("No solucionado");
+            hideWord.setText("No solucionado, sigue intentado para poder avanzar.");
             String res = hideWord.getText().toString();
             if(Login.user.getLevel().equals("3")) {
                 guardarRes(0, "4", 0);

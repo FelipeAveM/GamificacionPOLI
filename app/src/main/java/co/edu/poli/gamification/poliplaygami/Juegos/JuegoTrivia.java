@@ -536,7 +536,10 @@ public class JuegoTrivia extends AppCompatActivity{
                         "\n" +
                         "\n" + "No obtuviste monedas"+
                         "\n" +
-                        "\n" + "No obtuviste insignias");
+                        "\n" + "No obtuviste insignias" +
+                        "\n" +
+                        "\n" +
+                        "\n" + "¡Sigue intentando para poder avanzar!");
             }
             else if(puntaje < 2 && Login.user.getLevel().equals("2")){
                 guardarRes(0, "2", 0);

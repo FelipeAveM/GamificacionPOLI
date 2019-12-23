@@ -30,6 +30,8 @@ public class SeleccionarPuesto extends AppCompatActivity {
     private Button buttons[] = new Button[506];
     String numToList="";
     ArrayList <Integer> toDisable = new ArrayList<Integer>();
+    //Cantidad de sillas dividida 5... + 1
+    public int sillas = 51;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class SeleccionarPuesto extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), SeleccionarTransporte.class));
         }
         verticalLay = (LinearLayout) findViewById(R.id.verticalLayOut);
-        for (int i = 1; i < 12; i++) {
+        for (int i = 1; i < sillas; i++) {
             LinearLayout hl = new LinearLayout(this);
             hl.setOrientation(LinearLayout.HORIZONTAL);
             agregarBotones(hl, i);

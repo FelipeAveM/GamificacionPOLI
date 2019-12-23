@@ -222,10 +222,11 @@
         android:id="@+id/clues"
         android:layout_width="118dp"
         android:layout_height="247dp"
+        android:background="@color/silla5"
         android:fontFamily="@font/open_sans_light"
         android:onClick="info"
-        android:text="..."
-        android:textColor="@color/colorBlack"
+        android:text="aksjdjasd jas dasdl alskd alskd alksd alksd alks dalks daks d"
+        android:textColor="@color/colorWhite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

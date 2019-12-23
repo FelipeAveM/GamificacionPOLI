@@ -17,9 +17,12 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+import co.edu.poli.gamification.poliplaygami.Admin.AdminFunctions;
 import co.edu.poli.gamification.poliplaygami.Juegos.JuegoBuscarJavier;
 import co.edu.poli.gamification.poliplaygami.Juegos.JuegoCalculadora;
 import co.edu.poli.gamification.poliplaygami.Modelo.Usuario;
+import co.edu.poli.gamification.poliplaygami.Modelo.Utiles;
+import co.edu.poli.gamification.poliplaygami.Narrativa.IntroTrans;
 import co.edu.poli.gamification.poliplaygami.R;
 import co.edu.poli.gamification.poliplaygami.Servicios.Api;
 import co.edu.poli.gamification.poliplaygami.Servicios.RequestHandler;
@@ -80,10 +83,10 @@ public class Login extends AppCompatActivity {
         loadingBar.setTitle(R.string.progress_login);
         loadingBar.setMessage(getString(R.string.progress_esperar));
         loadingBar.show();
-        if(username.equals("j")){//Ingreso genérico a usuario de pruebas de juegos.
+
+        if(username.equals("admin") && password.equals("poli123")){//Ingreso genérico a usuario de pruebas de juegos.
             loadingBar.cancel();
-            Intent i = new Intent(Login.this, Mapa.class);
-            i.putExtra("back", "no");
+            Intent i = new Intent(this, AdminFunctions.class);
             startActivity(i);
             finish();
             return;

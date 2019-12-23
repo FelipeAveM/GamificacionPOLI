@@ -35,10 +35,10 @@ public class JuegoRelacionarSolucion extends AppCompatActivity {
         colorAnswer();
 
         switch (points){
-            case 0: bH.setText("No obtuviste ningún punto."); break;
-            case 1: bH.setText("Practica un poco más."); break;
-            case 2: bH.setText("¡Buen intento!"); break;
-            case 3: bH.setText("¡No está mal!"); break;
+            case 0: bH.setText("No obtuviste ningún punto. Sigue intentando para poder avanzar."); break;
+            case 1: bH.setText("Practica un poco más. Sigue intentando para poder avanzar."); break;
+            case 2: bH.setText("¡Buen intento!. Sigue intentando para poder avanzar."); break;
+            case 3: bH.setText("¡No está mal!. Sigue intentando para poder avanzar."); break;
             case 4: bH.setText("¡Bien! ¡Obtuviste una moneda!"); break;
             case 5: bH.setText("¡Bien hecho! ¡Obtuviste una moneda!"); break;
             case 6: bH.setText("¡Excelente! ¡¡Obtuviste una moneda y una insignia!!"); break;

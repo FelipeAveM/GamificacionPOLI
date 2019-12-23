@@ -218,7 +218,7 @@ public class JuegoBuscarJavier extends AppCompatActivity {
                 break;
         }
         String algo = "Estas son las pistas para encontrar los personajes y/o objetos:"+ "\n"  +
-                showClues + "\n" + "!pulsa aquí para escoder las pistas!";
+                showClues + "\n" + "!pulsa aquí para esconder las pistas!";
         if(shower == 1){
             tx.setText("...");
             shower--;

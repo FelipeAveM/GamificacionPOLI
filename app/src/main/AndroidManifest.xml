@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Narrativa.IntroMapa"></activity>
+        <activity android:name=".Admin.AdminFunctions"></activity>
+        <activity android:name=".Narrativa.IntroMapa" />
         <activity android:name=".Narrativa.IntroTrans" />
         <activity android:name=".Narrativa.Creditos" />
         <activity android:name=".Juegos.JuegoBuscarJavier" />
