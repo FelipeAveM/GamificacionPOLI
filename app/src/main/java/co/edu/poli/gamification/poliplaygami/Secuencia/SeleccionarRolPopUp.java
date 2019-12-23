@@ -15,6 +15,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 import co.edu.poli.gamification.poliplaygami.Modelo.Utiles;
+import co.edu.poli.gamification.poliplaygami.Narrativa.IntroTrans;
 import co.edu.poli.gamification.poliplaygami.R;
 import co.edu.poli.gamification.poliplaygami.Servicios.Api;
 import co.edu.poli.gamification.poliplaygami.Servicios.RequestHandler;

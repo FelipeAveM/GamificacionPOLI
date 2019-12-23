@@ -36,7 +36,7 @@ public class JuegoCalculadora extends AppCompatActivity {
         volverMapa = (Button)findViewById(R.id.volverMapa);
         transporte = (ImageView)findViewById(R.id.transporte);
 
-        monedasGrupo.setText("Cargando monedas...");
+        monedasGrupo.setText("¡Felicidades!");
         monedasPersonal.setText("Tienes " + Login.user.getCoins() + " monedas.");
         cargarMonedasGrupo();
     }

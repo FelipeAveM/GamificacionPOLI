@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo_intro_juegos"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout_inicio_viaje"
-    android:background="@drawable/historia_uno"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.poli.gamification.poliplaygami.Narrativa.InicioViaje">
+    tools:context="co.edu.poli.gamification.poliplaygami.Narrativa.IntroMapa">
 
     <android.support.constraint.Guideline
         android:id="@+id/footer_inicio_viaje"
@@ -16,19 +15,20 @@
         app:layout_constraintGuide_end="80dp" />
 
     <ImageButton
-        android:id="@+id/imgButoMap"
+        android:id="@+id/imgButoMap127"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:onClick="goMap"
+        android:onClick="toMap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/footer_inicio_viaje"
         app:srcCompat="@drawable/boton_siguiente" />
+
 
 </android.support.constraint.ConstraintLayout>
