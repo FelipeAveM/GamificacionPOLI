@@ -24,6 +24,7 @@
         android:layout_width="175dp"
         android:layout_height="100dp"
         android:backgroundTint="@color/silla4"
+        android:onClick="resetDB"
         android:text="Limpiar Base Datos"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toTopOf="@+id/editText"

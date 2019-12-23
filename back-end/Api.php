@@ -16,7 +16,18 @@ $response = array();
 
 if(isset($_GET['apicall'])){
     switch($_GET['apicall']){
-        
+        case 'resetdb':
+            $stmt = $conn->prepare("DELETE FROM tiempos_conexion");
+            $stmt->execute();
+            $stmt->fetch();
+            $stmt = $conn->prepare("DELETE FROM tiempos_juegos");
+            $stmt->execute();
+            $stmt->fetch();
+            $stmt = $conn->prepare("DELETE FROM usuario");
+            $stmt->execute();
+            $stmt->fetch();
+        break;
+
         case 'registrousuario':
         if(isTheseParametersAvailable(array('codigo','correo','username','contrasena', 'materia','rol', 'grupo', 'monedas', 'nivel', 'insignias'))){
             $codigo = $_POST['codigo']; 
