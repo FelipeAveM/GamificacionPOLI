@@ -218,17 +218,100 @@
         </ScrollView>
     </android.support.v4.widget.NestedScrollView>
 
-    <TextView
-        android:id="@+id/clues"
-        android:layout_width="118dp"
-        android:layout_height="247dp"
+    <Button
+        android:id="@+id/bClues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@color/silla5"
-        android:fontFamily="@font/open_sans_light"
-        android:onClick="info"
-        android:text="aksjdjasd jas dasdl alskd alskd alksd alksd alks dalks daks d"
+        android:onClick="showClues"
+        android:text="?"
         android:textColor="@color/colorWhite"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clues"
+        android:layout_width="357dp"
+        android:layout_height="658dp"
+        android:background="@color/silla5"
+        android:fontFamily="@font/open_sans_light"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/encJav"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Acontinuación encontrarás las pistas necesarias para hallar los objetos y/o personajes."
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/encJ1"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="Según las 'modas administrativias' se desarrollan algunas prácticas de selección que pueden producir efectos negativos en los participantes del proceso, visto de una manera crítica."
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/encJ2"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="2) ... Lectura x"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/encJ3"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="3) ... Lectura x"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/encJ4"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="4) ... Lectura x"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/encJav2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="closeInfo"
+                    android:text="¡Preciona aquí para ocultar las pistas!"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>

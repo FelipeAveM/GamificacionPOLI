@@ -28,4 +28,7 @@ public class Api {
     public static final String URL_GET_COINS_GROUP = ROOT_URL + "obtenerlistagrupos";
     public static final String URL_REPORTE = ROOT_URL + "generarreporte";
     public static final String URL_RESET = ROOT_URL + "resetdb";
+    public static final String URL_GET_CHAIRS = ROOT_URL + "getSillas";
+    public static final String URL_SET_CHAIRS = ROOT_URL + "agregarSillas";
+
 }

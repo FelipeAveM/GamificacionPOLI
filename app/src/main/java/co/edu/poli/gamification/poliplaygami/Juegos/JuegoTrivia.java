@@ -404,8 +404,8 @@ public class JuegoTrivia extends AppCompatActivity{
             "Diseñar bien los cargos que necesita.",
             "Los equipos se sentirán más satisfechos porque entienden el significado de sus trabajos y tienen control sobre lo que hacen.",
             "Análisis del entorno",
-            "El director de planeación"};
-
+            "El director de planeación"
+    };
     private int puntaje = 0;
     private int screens = 0;
     private int randy = 0;
@@ -549,7 +549,10 @@ public class JuegoTrivia extends AppCompatActivity{
                         "\n" +
                         "\n" + "No obtuviste monedas"+
                         "\n" +
-                        "\n" + "No obtuviste insignias");
+                        "\n" + "No obtuviste insignias" +
+                        "\n" +
+                                "\n" +
+                                "\n" + "¡Sigue intentando para poder avanzar!");
             }
             else if(Login.user.getLevel().equals("FIN")){
                 if(puntaje == 3){
