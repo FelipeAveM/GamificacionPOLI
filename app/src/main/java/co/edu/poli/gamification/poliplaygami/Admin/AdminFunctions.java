@@ -104,7 +104,7 @@ public class AdminFunctions extends AppCompatActivity implements EasyPermissions
 
         } else {
             Toast.makeText(getApplicationContext(),
-                    "SD Card not found", Toast.LENGTH_LONG).show();
+                    "SD no encontrada", Toast.LENGTH_LONG).show();
 
         }
 
@@ -125,7 +125,7 @@ public class AdminFunctions extends AppCompatActivity implements EasyPermissions
 
     @Override
     public void onPermissionsDenied(int requestCode, List<String> perms) {
-        Log.d(TAG, "Permission has been denied");
+        Log.d(TAG, "Permiso Rechazado");
     }
 
 
@@ -184,7 +184,7 @@ public class AdminFunctions extends AppCompatActivity implements EasyPermissions
                 fileName = f_url[0].substring(f_url[0].lastIndexOf('/') + 1, f_url[0].length());
 
                 //Append timestamp to file name
-                fileName = "hola";
+                fileName = "reporte";
 
                 //External directory path to save file
                 folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getCanonicalPath()+File.separator ;
