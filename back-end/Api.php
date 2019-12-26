@@ -16,6 +16,15 @@ $response = array();
 
 if(isset($_GET['apicall'])){
     switch($_GET['apicall']){
+
+        case 'getSillas':
+            $stmt = $conn->prepare("SELECT grupo FROM usuario where username = 'administrador'");
+            $stmt->execute();
+            $stmt->fetch();
+            $stmt->store_result();
+
+        break;
+        
         case 'resetdb':
             $stmt = $conn->prepare("DELETE FROM tiempos_conexion");
             $stmt->execute();
@@ -26,8 +35,10 @@ if(isset($_GET['apicall'])){
             $stmt = $conn->prepare("DELETE FROM usuario");
             $stmt->execute();
             $stmt->fetch();
+            $stmt = $conn->prepare("INSERT INTO usuario (codigo, correo, username, contrasena, materia, rol, grupo, monedas, nivel, insignias, gruporeal) VALUES ('000', 'poli@poligran.edu.co', 'administrador', 'politecnico123', 'Admin', 'Administrador', '250', '0', 'FIN', '1', null)");
+            $stmt->execute();
+            $stmt->fetch();
         break;
-
         case 'registrousuario':
         if(isTheseParametersAvailable(array('codigo','correo','username','contrasena', 'materia','rol', 'grupo', 'monedas', 'nivel', 'insignias'))){
             $codigo = $_POST['codigo']; 
@@ -45,6 +56,7 @@ if(isset($_GET['apicall'])){
             $stmt->bind_param("sss", $username, $coreo, $codigo);
             $stmt->execute();
             $stmt->store_result();
+            $response = $stmt;
 
             if($stmt->num_rows > 0){
                 $response['error'] = true;

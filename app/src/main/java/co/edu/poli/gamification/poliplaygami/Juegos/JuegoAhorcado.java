@@ -32,7 +32,10 @@ public class JuegoAhorcado extends AppCompatActivity {
     private Random randomLetters = new Random();
     private String[] palabras = {
 
-            "ADMINISTRACION", "EFECTIVO", "TACTICOS", "CIENTIFICO", "ESTRATEGICO", "EVALUACION", "DELEGAR", "ORGANIZACION", "CONTROL", "POLITICAS", "RETROALIMENTACION","CORRECCION","DESVIACION","INDICADOR","CONTROL","CONTROL","RECLUTAMIENTO","INTEGRACION","ESCRITA","HORIZONTAL","VERTICAL","COMUNICACIÓN","PLANDEACCION","IMPLEMENTACION","RETROALIMENTACION", "EMPODERAMIENTO", "LINEA", "DELEGACION", "ORGANICA"
+            "ADMINISTRACION", "EFECTIVO", "TACTICOS", "CIENTIFICO", "ESTRATEGICO", "EVALUACION", "DELEGAR",
+            "ORGANIZACION", "CONTROL", "POLITICAS", "RETROALIMENTACION","CORRECCION","DESVIACION","INDICADOR",
+            "CONTROL","CONTROL","RECLUTAMIENTO","INTEGRACION","ESCRITA","HORIZONTAL","VERTICAL","COMUNICACIÓN",
+            "PLANDEACCION","IMPLEMENTACION","RETROALIMENTACION", "EMPODERAMIENTO", "LINEA", "DELEGACION", "ORGANICA"
     };
 
     private String[] enunciadosPalabras = {
@@ -200,7 +203,7 @@ public class JuegoAhorcado extends AppCompatActivity {
                     alMapa();
                 }
             };
-            hideWord.setText("No solucionado, sigue intentado para poder avanzar.");
+            hideWord.setText("Sigue intentado.");
             String res = hideWord.getText().toString();
             if(Login.user.getLevel().equals("3")) {
                 guardarRes(0, "4", 0);

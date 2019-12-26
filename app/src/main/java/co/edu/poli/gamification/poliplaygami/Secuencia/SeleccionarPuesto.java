@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -15,6 +16,7 @@ import co.edu.poli.gamification.poliplaygami.Servicios.Api;
 import co.edu.poli.gamification.poliplaygami.Servicios.RequestHandler;
 
 import android.view.ViewGroup.LayoutParams;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -31,7 +33,9 @@ public class SeleccionarPuesto extends AppCompatActivity {
     String numToList="";
     ArrayList <Integer> toDisable = new ArrayList<Integer>();
     //Cantidad de sillas dividida 5... + 1
-    public int sillas = 51;
+    public int sillas = 250;
+    public TextView tvSillas;
+    public String numSillas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +44,19 @@ public class SeleccionarPuesto extends AppCompatActivity {
         if(!Login.user.getGroup().equals("vacio")){
             startActivity(new Intent(getApplicationContext(), SeleccionarTransporte.class));
         }
+        try {
+            numSillas = new GetChairs().execute().get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        tvSillas = (TextView) findViewById(R.id.chairs);
+        tvSillas.setVisibility(View.INVISIBLE);
+        String ncadena=numSillas.substring(1,numSillas.length()-2);
+        sillas = Integer.parseInt(ncadena);
         verticalLay = (LinearLayout) findViewById(R.id.verticalLayOut);
-        for (int i = 1; i < sillas; i++) {
+        for (int i = 1; i < ((sillas/5)+1); i++) {
             LinearLayout hl = new LinearLayout(this);
             hl.setOrientation(LinearLayout.HORIZONTAL);
             agregarBotones(hl, i);
@@ -49,7 +64,6 @@ public class SeleccionarPuesto extends AppCompatActivity {
         }
         checkAndFillPuestos();
     }
-
     public void agregarBotones(LinearLayout hl, int l){
         for (int i = 1; i < 6; i++) {
             Button tv = new Button(this);
@@ -128,7 +142,6 @@ public class SeleccionarPuesto extends AppCompatActivity {
             buttons[toDisable.get(i)].setBackground(getResources().getDrawable(R.drawable.boton_sillas_dis));
         }
     }
-
     class AddGroup extends AsyncTask<Void, Void, String> {
         private String groupAdd;
         public AddGroup(String groupAdd){
@@ -167,7 +180,6 @@ public class SeleccionarPuesto extends AppCompatActivity {
             return requestHandler.sendPostRequest(Api.URL_ADD_GROUP, params);
         }
     }
-
     class CheckinSeleccionarPRAD extends AsyncTask<Void, Void, String>{
         @Override
         protected String doInBackground(Void... voids) {
@@ -180,6 +192,14 @@ public class SeleccionarPuesto extends AppCompatActivity {
         protected String doInBackground(Void... voids) {
             RequestHandler requestHandler = new RequestHandler();
             return requestHandler.sendGetRequest(Api.URL_GET_CHECKIN_PEAL);
+        }
+    }
+    class GetChairs extends AsyncTask<Void, Void, String>{
+        @Override
+        protected String doInBackground(Void... voids) {
+            RequestHandler requestHandler = new RequestHandler();
+            numSillas = requestHandler.sendGetRequest(Api.URL_GET_CHAIRS);
+            return requestHandler.sendGetRequest(Api.URL_GET_CHAIRS);
         }
     }
 
