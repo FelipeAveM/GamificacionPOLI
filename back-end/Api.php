@@ -545,9 +545,11 @@ if(isset($_GET['apicall'])){
             $response['message'] = 'Los datos ingresados no son correctos.';
         }
         break;
-
-        default: 
-        $response['error'] = true; 
+        case 'generarreporte':
+            include('Reporte.php');
+            break;
+        default:
+        $response['error'] = true;
         $response['message'] = 'Invalid Operation Called';
     }
 
