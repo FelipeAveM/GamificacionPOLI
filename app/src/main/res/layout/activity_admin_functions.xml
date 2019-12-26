@@ -12,6 +12,7 @@
         android:layout_width="175dp"
         android:layout_height="100dp"
         android:backgroundTint="@color/silla4"
+        android:onClick="generarReporte"
         android:text="Exportar Informe"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toTopOf="@+id/button6"

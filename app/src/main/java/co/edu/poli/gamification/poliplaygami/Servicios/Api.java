@@ -26,6 +26,6 @@ public class Api {
     public static final String URL_GET_CHECKIN_PEAL = ROOT_URL + "traerpuestospeal";
     public static final String URL_GET_CHECKIN = ROOT_URL + "traerpuestos";
     public static final String URL_GET_COINS_GROUP = ROOT_URL + "obtenerlistagrupos";
-
+    public static final String URL_REPORTE = ROOT_URL + "generarreporte";
     public static final String URL_RESET = ROOT_URL + "resetdb";
 }
