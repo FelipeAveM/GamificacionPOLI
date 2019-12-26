@@ -158,7 +158,7 @@ public class AdminFunctions extends AppCompatActivity implements EasyPermissions
                 fileName = "hola";
 
                 //External directory path to save file
-                folder = Environment.getExternalStorageDirectory() + File.separator + "androiddeft/";
+                folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getCanonicalPath()+File.separator ;
 
                 //Create androiddeft folder if it does not exist
                 File directory = new File(folder);
