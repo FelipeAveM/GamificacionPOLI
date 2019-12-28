@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_log_reg"
-    tools:context="co.edu.poli.gamification.poliplaygami.Secuencia.Registro">
+    tools:context="co.edu.poli.gamification.poliplayapp.Secuencia.Registro">
 
     <android.support.constraint.Guideline
         android:id="@+id/header_registro"
