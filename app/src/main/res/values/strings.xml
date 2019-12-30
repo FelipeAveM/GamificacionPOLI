@@ -99,9 +99,4 @@
     <string name="opcion_1_calculadora">Conozco mi factura mensual</string>
     <string name="opcion_2_calculadora">No sé mi consumo pero me considero un estudiante promedio.</string>
     <string name="trivia">TRIVIA</string>
-
-    <!-- Exportar Reporte -->
-    <string name="http">http://</string>
-    <string name="descarga">Descarga</string>
-    <string name="escribirArchivo">Esta aplicación necesita acceder a tu almacenamiento para escribir archivos.</string>
 </resources>

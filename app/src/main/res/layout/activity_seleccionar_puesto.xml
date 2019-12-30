@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.poli.gamification.poliplayapp.Secuencia.SeleccionarPuesto">
+    tools:context="co.edu.poli.gamification.poliplaygami.Secuencia.SeleccionarPuesto">
 
     <TextView
         android:id="@+id/enca_sel_puesto"

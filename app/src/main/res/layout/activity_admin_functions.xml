@@ -5,14 +5,13 @@
     android:background="@color/silla5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.poli.gamification.poliplayapp.Admin.AdminFunctions">
+    tools:context="co.edu.poli.gamification.poliplaygami.Admin.AdminFunctions">
 
     <Button
         android:id="@+id/button3"
         android:layout_width="175dp"
         android:layout_height="100dp"
         android:backgroundTint="@color/silla4"
-        android:onClick="generarReporte"
         android:text="Exportar Informe"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toTopOf="@+id/button6"
@@ -25,7 +24,7 @@
         android:layout_width="175dp"
         android:layout_height="100dp"
         android:backgroundTint="@color/silla4"
-        android:onClick="enableResetBut"
+        android:onClick="resetDB"
         android:text="Limpiar Base Datos"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toTopOf="@+id/sillasEst"
@@ -71,32 +70,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonSI"
-        android:layout_width="63dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="32dp"
-        android:background="@android:color/holo_red_dark"
-        android:onClick="resetDB"
-        android:text="SI"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonNO"
-        android:layout_width="116dp"
-        android:layout_height="76dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/silla4"
-        android:onClick="disenableResetBut"
-        android:text="NO"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
 
 </android.support.constraint.ConstraintLayout>

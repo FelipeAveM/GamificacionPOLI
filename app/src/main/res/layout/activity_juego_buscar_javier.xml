@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.poli.gamification.poliplayapp.Juegos.JuegoBuscarJavier">
+    tools:context="co.edu.poli.gamification.poliplaygami.Juegos.JuegoBuscarJavier">
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/nestedScrollView2"
@@ -265,7 +265,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="125dp"
                     android:fontFamily="@font/open_sans_light"
-                    android:text="1) Resultado de orientar el diseño organizacional en  los procesos clave, las competencias clave, y los procesos de apoyo. Ver lectura 5"
+                    android:text="Según las 'modas administrativias' se desarrollan algunas prácticas de selección que pueden producir efectos negativos en los participantes del proceso, visto de una manera crítica."
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp" />
 
@@ -281,7 +281,7 @@
                 <TextView
                     android:id="@+id/encJ3"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="125dp"
                     android:fontFamily="@font/open_sans_light"
                     android:text="3) ... Lectura x"
                     android:textColor="@color/colorWhite"
@@ -290,9 +290,9 @@
                 <TextView
                     android:id="@+id/encJ4"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="125dp"
                     android:fontFamily="@font/open_sans_light"
-                    android:text="4) añsldkasñldkañlsd"
+                    android:text="4) ... Lectura x"
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp" />
 
@@ -303,7 +303,7 @@
                     android:fontFamily="@font/open_sans_light"
                     android:gravity="center_horizontal|center_vertical"
                     android:onClick="closeInfo"
-                    android:text="¡Presiona aquí para ocultar las pistas!"
+                    android:text="¡Preciona aquí para ocultar las pistas!"
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp"
                     android:textStyle="bold" />
