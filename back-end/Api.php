@@ -17,12 +17,38 @@ $response = array();
 if(isset($_GET['apicall'])){
     switch($_GET['apicall']){
 
-        case 'getSillas':
+       case 'agregarSillas':
+            if(isTheseParametersAvailable(array('grupo'))){
+                $grupo = $_REQUEST['grupo'];
+                $stmt = $conn->prepare("UPDATE usuario SET grupo = ? WHERE correo = 'poli@poligran.edu.co'");
+                $stmt->bind_param("s", $grupo);
+                if($stmt->execute()){
+                    $stmt->execute();
+                    $stmt->bind_result($grupo);
+                    $stmt->fetch();
+                    $stmt->close();
+                    $response['error'] = false;
+                    $response['message'] = 'Grupo agregado satisfactoriamente.';
+                }
+                else{
+                    $response['error'] = true;
+                    $response['message'] = 'Error.';
+                }
+            }
+            else{
+                $response['error'] = true;
+                $response['message'] = 'Los datos ingresados no son correctos.';
+            }
+        break;
+
+         case 'getSillas':
             $stmt = $conn->prepare("SELECT grupo FROM usuario where username = 'administrador'");
             $stmt->execute();
-            $stmt->fetch();
             $stmt->store_result();
-
+            $grupo = $stmt;
+            $stmt->bind_result($grupo);
+            $stmt->fetch();
+            $response = $grupo;
         break;
         
         case 'resetdb':
@@ -546,8 +572,72 @@ if(isset($_GET['apicall'])){
         }
         break;
         case 'generarreporte':
-            include('Reporte.php');
-            break;
+        $arrayUsuarios = [];
+        $arrayTiemposJuegos = [];
+        $arrayTiemposConexion = [];
+        $stmt = $conn->prepare("SELECT * FROM usuario ");
+        $stmt->execute();
+        $stmt->store_result();
+        $cantUsuarios = $stmt->num_rows;
+        if($cantUsuarios > 0){
+            $fila = 0;
+            while($fila < $cantUsuarios){
+                $stmt->bind_result($codigo, $correo, $username, $contrasena, $materia, $rol, $grupo, $monedas, $nivel, $insignias, $gruporeal);
+                $stmt->fetch();
+                $arrayUsuarios[$fila]['codigo'] = $codigo;
+                $arrayUsuarios[$fila]['correo'] = $correo;
+                $arrayUsuarios[$fila]['username'] = $username;
+                $arrayUsuarios[$fila]['contrasena'] = $contrasena;
+                $arrayUsuarios[$fila]['materia'] = $materia;
+                $arrayUsuarios[$fila]['rol'] = $rol;
+                $arrayUsuarios[$fila]['grupo'] = $grupo;
+                $arrayUsuarios[$fila]['monedas'] = $monedas;
+                $arrayUsuarios[$fila]['nivel'] = $nivel;
+                $arrayUsuarios[$fila]['insignias'] = $insignias;
+                $arrayUsuarios[$fila]['gruporeal'] = $gruporeal;
+
+                $fila = $fila + 1;
+            }
+        }
+
+        $stmt = $conn->prepare("SELECT * FROM tiempos_conexion");
+        $stmt->execute();
+        $stmt->store_result();
+        $cantTiemposConexion = $stmt->num_rows;
+        if($cantTiemposConexion > 0){
+            $fila = 0;
+            while($fila < $cantTiemposConexion){
+                $stmt->bind_result($fecha, $codigo_usuario, $grupo_usuario, $tiempo);
+                $stmt->fetch();
+                $arrayTiemposConexion[$fila]['fecha'] = $fecha;
+                $arrayTiemposConexion[$fila]['codigo_usuario'] = $codigo_usuario;
+                $arrayTiemposConexion[$fila]['grupo_usuario'] = $grupo_usuario;
+                $arrayTiemposConexion[$fila]['tiempo'] = $tiempo;
+                $fila = $fila + 1;
+            }
+        }
+
+        $stmt = $conn->prepare("SELECT * FROM tiempos_juegos ");
+        $stmt->execute();
+        $stmt->store_result();
+        $cantTiemposJuegos = $stmt->num_rows;
+        if($cantTiemposJuegos > 0){
+            $fila = 0;
+            while($fila < $cantTiemposJuegos){
+                $stmt->bind_result($fecha, $codigo_usuario, $grupo_usuario, $nombre_juego, $monedas, $tiempo);
+                $stmt->fetch();
+                $arrayTiemposJuegos[$fila]['fecha'] = $fecha;
+                $arrayTiemposJuegos[$fila]['codigo_usuario'] = $codigo_usuario;
+                $arrayTiemposJuegos[$fila]['grupo_usuario'] = $grupo_usuario;
+                $arrayTiemposJuegos[$fila]['nombre_juego'] = $nombre_juego;
+                $arrayTiemposJuegos[$fila]['monedas'] = $monedas;
+                $arrayTiemposJuegos[$fila]['tiempo'] = $tiempo;
+
+                $fila = $fila + 1;
+            }
+        }
+        include('Reporte.php');
+        break;
         default:
         $response['error'] = true;
         $response['message'] = 'Invalid Operation Called';

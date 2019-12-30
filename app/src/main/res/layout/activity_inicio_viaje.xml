@@ -5,7 +5,7 @@
     android:id="@+id/layout_inicio_viaje"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.poli.gamification.poliplaygami.Narrativa.InicioViaje">
+    tools:context="co.edu.poli.gamification.poliplayapp.Narrativa.InicioViaje">
 
     <android.support.constraint.Guideline
         android:id="@+id/footer_inicio_viaje"
