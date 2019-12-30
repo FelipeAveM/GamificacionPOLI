@@ -1,11 +1,13 @@
 package co.edu.poli.gamification.poliplaygami.Admin;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -51,7 +53,19 @@ public class AdminFunctions extends AppCompatActivity implements EasyPermissions
         setContentView(R.layout.activity_admin_functions);
         sillasEstudiantes = findViewById(R.id.sillasEst);
     }
+    protected boolean shouldAskPermissions() {
+        return (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1);
+    }
 
+    @TargetApi(23)
+    protected void askPermissions() {
+        String[] permissions = {
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+        };
+        int requestCode = 200;
+        requestPermissions(permissions, requestCode);
+    }
     public void toLogin(View view){
         Intent i = new Intent(this, Login.class);
         Login.user = null;
@@ -99,6 +113,9 @@ public class AdminFunctions extends AppCompatActivity implements EasyPermissions
             } else {
                 //If permission is not present request for the same.
                 EasyPermissions.requestPermissions(context, getString(R.string.escribirArchivo), WRITE_REQUEST_CODE, Manifest.permission.READ_EXTERNAL_STORAGE);
+                if (shouldAskPermissions()) {
+                    askPermissions();
+                }
             }
 
 
@@ -187,8 +204,8 @@ public class AdminFunctions extends AppCompatActivity implements EasyPermissions
                 fileName = "reporte";
 
                 //External directory path to save file
-                folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getCanonicalPath()+File.separator ;
-
+                folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getCanonicalPath() + File.separator;
+                Log.d("qwerqwer", folder);
                 //Create androiddeft folder if it does not exist
                 File directory = new File(folder);
 
