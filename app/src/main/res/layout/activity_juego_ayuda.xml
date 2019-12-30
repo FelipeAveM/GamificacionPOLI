@@ -6,7 +6,7 @@
     android:background="@drawable/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.poli.gamification.poliplayapp.Juegos.JuegoAyuda">
+    tools:context="co.edu.poli.gamification.poliplaygami.Juegos.JuegoAyuda">
 
     <TextView
         android:id="@+id/textView4"
