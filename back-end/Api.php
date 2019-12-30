@@ -17,12 +17,38 @@ $response = array();
 if(isset($_GET['apicall'])){
     switch($_GET['apicall']){
 
-        case 'getSillas':
+       case 'agregarSillas':
+            if(isTheseParametersAvailable(array('grupo'))){
+                $grupo = $_REQUEST['grupo'];
+                $stmt = $conn->prepare("UPDATE usuario SET grupo = ? WHERE correo = 'poli@poligran.edu.co'");
+                $stmt->bind_param("s", $grupo);
+                if($stmt->execute()){
+                    $stmt->execute();
+                    $stmt->bind_result($grupo);
+                    $stmt->fetch();
+                    $stmt->close();
+                    $response['error'] = false;
+                    $response['message'] = 'Grupo agregado satisfactoriamente.';
+                }
+                else{
+                    $response['error'] = true;
+                    $response['message'] = 'Error.';
+                }
+            }
+            else{
+                $response['error'] = true;
+                $response['message'] = 'Los datos ingresados no son correctos.';
+            }
+        break;
+
+         case 'getSillas':
             $stmt = $conn->prepare("SELECT grupo FROM usuario where username = 'administrador'");
             $stmt->execute();
-            $stmt->fetch();
             $stmt->store_result();
-
+            $grupo = $stmt;
+            $stmt->bind_result($grupo);
+            $stmt->fetch();
+            $response = $grupo;
         break;
         
         case 'resetdb':
